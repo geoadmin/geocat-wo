@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+    - 4.4.9
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+
+    - name: "Checking out"
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: "Setup java JDK"
+      uses: actions/setup-java@v4.2.1
+      with:
+        java-version: 11
+        distribution: temurin
+        java-package: jdk
+        cache: maven
+
+    - name: "Run test"
+      run: |
+        mvn clean install -DskipTests -Denforcer.skip
+        mvn test -Denforcer.skip -pl web
+
+    - name: "Setting image tag"
+      id: version
+      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+
+    - name: "Build docker container" 
+      run: |
+        cd release/target/docker/
+        docker build . -t ghcr.io/${{ github.repository }}/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+
+    - name: "Login to ghcr.io"
+      run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
+
+    - name: "Push to github packages"
+      run: docker push ghcr.io/${{ github.repository }}/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
