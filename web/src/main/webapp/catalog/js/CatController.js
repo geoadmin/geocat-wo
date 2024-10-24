@@ -109,6 +109,7 @@
               ita: "it",
               dut: "nl",
               kor: "ko",
+              pol: "pl",
               por: "pt",
               rum: "ro",
               rus: "ru",
@@ -698,25 +699,6 @@
                 tooltip: "Grid",
                 icon: "fa-th",
                 related: []
-              },
-              {
-                tplUrl:
-                  "../../catalog/components/" +
-                  "search/resultsview/partials/viewtemplates/list.html",
-                tooltip: "List",
-                icon: "fa-bars",
-                related: ["parent", "children", "services", "datasets"]
-              },
-              {
-                tplUrl:
-                  "../../catalog/components/" +
-                  "search/resultsview/partials/viewtemplates/table.html",
-                tooltip: "Table",
-                icon: "fa-table",
-                related: [],
-                source: {
-                  exclude: ["resourceAbstract*", "Org*", "contact*"]
-                }
               }
             ],
             // Optional. If not set, the first resultViewTpls is used.
@@ -906,8 +888,10 @@
             // and redirecting to the catalogue to view metadata record
             // appUrl: "https://sextant.ifremer.fr/Donnees/Catalogue",
             isSocialbarEnabled: true,
+            isDefaultContactViewEnabled: false,
             showStatusWatermarkFor: "",
             showStatusTopBarFor: "",
+            recordviewCustomMenu: [], // List of static pages identifiers to display
             showCitation: {
               enabled: false,
               // if: {'documentStandard': ['iso19115-3.2018']}
@@ -1608,6 +1592,7 @@
     "gnExternalViewer",
     "gnAlertService",
     "gnESFacet",
+    "gnFacetMetaLabel",
     function (
       $scope,
       $http,
@@ -1628,7 +1613,8 @@
       $cookies,
       gnExternalViewer,
       gnAlertService,
-      gnESFacet
+      gnESFacet,
+      gnFacetMetaLabel
     ) {
       $scope.version = "0.0.1";
       var defaultNode = "srv";
@@ -1737,7 +1723,8 @@
         swe: "Svenska",
         ukr: "українська",
         dan: "Dansk",
-        wel: "Cymraeg"
+        wel: "Cymraeg",
+        pol: "Polski"
       };
       $scope.url = "";
       $scope.gnUrl = gnGlobalSettings.gnUrl;
@@ -1753,6 +1740,7 @@
       $scope.isExternalViewerEnabled = gnExternalViewer.isEnabled();
       $scope.externalViewerUrl = gnExternalViewer.getBaseUrl();
       $scope.publicationOptions = [];
+      $scope.getFacetLabel = gnFacetMetaLabel.getFacetLabel;
 
       $http.get("../api/records/sharing/options").then(function (response) {
         $scope.publicationOptions = response.data;
