@@ -707,25 +707,6 @@
                 tooltip: "Grid",
                 icon: "fa-th",
                 related: []
-              },
-              {
-                tplUrl:
-                  "../../catalog/components/" +
-                  "search/resultsview/partials/viewtemplates/list.html",
-                tooltip: "List",
-                icon: "fa-bars",
-                related: ["parent", "children", "services", "datasets"]
-              },
-              {
-                tplUrl:
-                  "../../catalog/components/" +
-                  "search/resultsview/partials/viewtemplates/table.html",
-                tooltip: "Table",
-                icon: "fa-table",
-                related: [],
-                source: {
-                  exclude: ["resourceAbstract*", "Org*", "contact*"]
-                }
               }
             ],
             // Optional. If not set, the first resultViewTpls is used.
