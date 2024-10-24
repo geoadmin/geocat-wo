@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - war-overlay
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+
+    - name: "Checking out"
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: "Setup java JDK"
+      uses: actions/setup-java@v4.2.1
+      with:
+        java-version: 11
+        distribution: temurin
+        java-package: jdk
+        cache: maven
+
+    - name: "Setting image tag"
+      id: version
+      run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
+
+    - name: "Build docker container" 
+      run: |
+        cd core-geonetwork 
+        mvn clean install -DskipTests -Denforcer.skip
+        cd ..
+        mvn install:install-file -Dfile=core-geonetwork/web/target/geonetwork.war -DgroupId=org.geonetwork-opensource -DartifactId=web-app -Dversion=4.4.6-0 -Dpackaging=war
+        mvn clean install -DskipTests -Denforcer.skip -pl web
+        mvn clean install -DskipTests -Denforcer.skip -pl release 
+        cd release/target/docker/
+        docker build . -t docker.pkg.github.com/geoadmin/geocat/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+
+    - name: "Login to docker.pkg.github.com"
+      run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
+
+    - name: "Push to github packages"
+      run: docker push docker.pkg.github.com/geoadmin/geocat/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
