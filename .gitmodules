@@ -1,3 +1,6 @@
 [submodule "core-geonetwork"]
 	path = core-geonetwork
 	url = git@github.com:sebr72/core-geonetwork.git 
+[submodule "iso19139.che"]
+	path = iso19139.che
+	url = git@github.com:cmangeat/iso19139.che.git
