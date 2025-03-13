@@ -32,7 +32,7 @@ jobs:
       run: |
         mvn clean install -DskipTests -Denforcer.skip
         cd release/target/docker/
-        docker build . -t docker.pkg.github.com/geoadmin/geocat/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+        docker build . -t docker.pkg.github.com/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
 
     - name: "Login to docker.pkg.github.com"
       run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
