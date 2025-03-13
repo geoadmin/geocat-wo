@@ -38,4 +38,4 @@ jobs:
       run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
 
     - name: "Push to github packages"
-      run: docker push docker.pkg.github.com/geoadmin/geocat/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+      run: docker push docker.pkg.github.com/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
