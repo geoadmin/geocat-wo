@@ -3,7 +3,7 @@
 	url = git@github.com:sebr72/core-geonetwork.git 
 [submodule "iso19139.che"]
 	path = iso19139.che
-	url = git@github.com:cmangeat/iso19139.che.git
+	url = git@github.com:metadata101/iso19139.che.git
 [submodule "iso19115-3.2018.che"]
 	path = iso19115-3.2018.che
-	url = git@github.com:cmangeat/iso19115-3.2018.che
+	url = git@github.com:metadata101/iso19115-3.2018.che.git 
