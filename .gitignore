@@ -1,0 +1,19 @@
+# Extensions
+*.factorypath
+*.iml
+*.bak
+*.launch
+*.old
+.DS_Store
+.project
+git*.properties
+
+# Directories and paths
+*/*/.*
+*/*/target/
+*/target/
+.*/
+idea/
+out/
+target/
+
