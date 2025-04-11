@@ -104,7 +104,14 @@
                   <directory>${project.basedir}/../iso19139.che/src/main/config/codelist</directory>
                   <targetPath>WEB-INF/data/config/codelist</targetPath>
                 </resource>
-
+                <resource>
+                  <directory>${project.basedir}/../iso19115-3.2018.che/src/main/plugin</directory>
+                  <targetPath>WEB-INF/data/config/schema_plugins</targetPath>
+                </resource>
+                <resource>
+                  <directory>${project.basedir}/../iso19115-3.2018.che/src/main/config/codelist</directory>
+                  <targetPath>WEB-INF/data/config/codelist</targetPath>
+                </resource>
               </resources>
             </configuration>
           </execution>
