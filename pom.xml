@@ -111,6 +111,7 @@
    <module>web</module>
    <module>release</module>
    <module>iso19139.che</module>
+   <module>iso19115-3.2018.che</module>
   </modules>
 
 </project>
