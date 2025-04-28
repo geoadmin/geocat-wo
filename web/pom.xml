@@ -33,20 +33,6 @@
       <scope>runtime</scope>
     </dependency>
 
-    <!-- additional schema plugin for overlay -->
-    <dependency>
-      <groupId>org.geonetwork-opensource.schemas</groupId>
-      <artifactId>gn-schema-iso19139.che</artifactId>
-      <version>${project.version}</version>
-      <type>jar</type>
-      <exclusions>
-        <exclusion>
-          <groupId>*</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
     <!-- used to compile, already included in war -->
     <dependency>
       <groupId>org.geonetwork-opensource</groupId>
