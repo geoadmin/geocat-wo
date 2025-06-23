@@ -23,13 +23,11 @@ RUN apt-get -y update && \
     chown -R jetty:jetty /opt/geonetwork
 
 USER jetty
-ENV GN_FILE geonetwork.war
-ENV GN_VERSION 4.4.6
-ENV GN_DOWNLOAD_MD5 ad596d3348872506c78daa05edb14782
+ENV GN_VERSION 4.4.8-0
 
-COPY geonetwork-4.4.6-0-swiss-custom.zip /opt/geonetwork/geonetwork-4.4.6-0-swiss-custom.zip
+COPY geonetwork-${GN_VERSION}-swiss-custom.zip /opt/geonetwork/geonetwork-${GN_VERSION}-swiss-custom.zip
 RUN cd /opt/geonetwork/ && \
-     unzip -q geonetwork-4.4.6-0-swiss-custom.zip && \
+     unzip -q geonetwork-${GN_VERSION}-swiss-custom.zip && \
      unzip -q geonetwork.war && \
      rm geonetwork.war
 
