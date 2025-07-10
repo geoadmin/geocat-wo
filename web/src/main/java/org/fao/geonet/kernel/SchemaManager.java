@@ -148,26 +148,26 @@ public class SchemaManager {
         try {
             if (ApplicationContextHolder.get() != null) {
                 schemaPlugin = (SchemaPlugin) ApplicationContextHolder.
-                    get().
-                    getBean(schemaBeanIdentifier);
+                        get().
+                        getBean(schemaBeanIdentifier);
 
                 if (schemaPlugin == null &&
-                    schemaIdentifier.startsWith(ISO19139SchemaPlugin.IDENTIFIER)) {
+                        schemaIdentifier.startsWith(ISO19139SchemaPlugin.IDENTIFIER)) {
                     // For ISO19139 profiles, get the ISO19139 bean if no custom one defined
                     // Can't depend here on ISO19139SchemaPlugin to avoid to introduce
                     // circular ref.
                     schemaBeanIdentifier = ISO19139SchemaPlugin.IDENTIFIER + "SchemaPlugin";
                     schemaPlugin = (SchemaPlugin) ApplicationContextHolder.
-                        get().
-                        getBean(schemaBeanIdentifier);
+                            get().
+                            getBean(schemaBeanIdentifier);
                 }
             }
         } catch (Exception e) {
             // No bean for this schema
             if (Log.isDebugEnabled(Geonet.SCHEMA_MANAGER)) {
                 Log.debug(Geonet.SCHEMA_MANAGER, "No bean defined for the schema plugin '" +
-                    schemaIdentifier + "'. " +
-                    e.getMessage());
+                        schemaIdentifier + "'. " +
+                        e.getMessage());
             }
         }
         return schemaPlugin;
@@ -198,7 +198,7 @@ public class SchemaManager {
 
     private void addResolverRewriteDirectives(GeonetworkDataDirectory dataDir) {
         NioPathAwareCatalogResolver.addRewriteDirective(new PrefixUrlRewrite("sharedFormatterDir/",
-            dataDir.getFormatterDir().toAbsolutePath().toUri() + "/"));
+                dataDir.getFormatterDir().toAbsolutePath().toUri() + "/"));
     }
 
     /**
@@ -761,7 +761,7 @@ public class SchemaManager {
                 String defaultSchemaOrDependencySchema = checkNamespace(md, defaultSchema);
                 if (defaultSchemaOrDependencySchema != null) {
                     Log.warning(Geonet.SCHEMA_MANAGER, "  Autodetecting schema failed for " + md.getName() + " in namespace " + md.getNamespace()
-                        + ". Using default schema or one of its dependency: " + defaultSchemaOrDependencySchema);
+                            + ". Using default schema or one of its dependency: " + defaultSchemaOrDependencySchema);
                     schema = defaultSchemaOrDependencySchema;
                 }
             }
@@ -932,7 +932,7 @@ public class SchemaManager {
      */
     private void addSchema(ApplicationContext applicationContext, Path schemaDir, Element schemaPluginCatRoot, Path xmlSchemaFile,
                            Path xmlSuggestFile, Path xmlSubstitutionsFile, Path xmlIdFile, Path oasisCatFile, Path conversionsFile)
-        throws Exception {
+            throws Exception {
         Path path = schemaDir;
 
         // -- add any oasis catalog files to Jeeves.XML_CATALOG_FILES system
@@ -1000,18 +1000,18 @@ public class SchemaManager {
         Log.debug(Geonet.SCHEMA_MANAGER, "  UUID is read/write mode: " + mds.isReadwriteUUID());
 
         putSchemaInfo(
-            schemaName,
-            idInfo.one(), // uuid of schema
-            idInfo.two(), // version of schema
-            mds,
-            path,
-            new SchemaSuggestions(xmlSuggestFile),
-            extractADElements(xmlIdFile),
-            xfMap,
-            true, // all schemas are plugin schemas now
-            extractSchemaLocation(xmlIdFile),
-            extractConvElements(conversionsFile),
-            extractDepends(xmlIdFile));
+                schemaName,
+                idInfo.one(), // uuid of schema
+                idInfo.two(), // version of schema
+                mds,
+                path,
+                new SchemaSuggestions(xmlSuggestFile),
+                extractADElements(xmlIdFile),
+                xfMap,
+                true, // all schemas are plugin schemas now
+                extractSchemaLocation(xmlIdFile),
+                extractConvElements(conversionsFile),
+                extractDepends(xmlIdFile));
 
         if (Log.isDebugEnabled(Geonet.SCHEMA_MANAGER)) {
             Log.debug(Geonet.SCHEMA_MANAGER, "Property " + Constants.XML_CATALOG_FILES + " is " + System.getProperty(Constants.XML_CATALOG_FILES));
@@ -1136,7 +1136,7 @@ public class SchemaManager {
 
             String nameAttr = uri.getAttributeValue("uriStartString");
             if (nameAttr.startsWith(Geonet.File.METADATA_BLANK) &&
-                nameAttr.compareTo(baseBlank) > 0) {
+                    nameAttr.compareTo(baseBlank) > 0) {
                 baseBlank = nameAttr;
             }
         }
@@ -1297,7 +1297,7 @@ public class SchemaManager {
 
         if (!Files.exists(idFile)) {
             Log.error(Geonet.SCHEMA_MANAGER, "    Skipping : " + schemasDir.getFileName() + " as it doesn't have " +
-                Geonet.File.SCHEMA_ID);
+                    Geonet.File.SCHEMA_ID);
             return;
         }
 
@@ -1317,7 +1317,7 @@ public class SchemaManager {
             } else {
                 stage = "adding the schema information";
                 addSchema(applicationContext, schemasDir, schemaPluginCatRoot, schemaFile, suggestFile, substitutesFile,
-                    idFile, oasisCatFile, conversionsFile);
+                        idFile, oasisCatFile, conversionsFile);
                 ResolverWrapper.createResolverForSchema(schemasDir.getFileName().toString(), oasisCatFile);
             }
         } catch (Exception e) {
@@ -1371,8 +1371,8 @@ public class SchemaManager {
 
             if (appVersion.compareTo(schemaMinorAppVersion) < 0) {
                 Log.error(Geonet.SCHEMA_MANAGER, "Schema " + schemaInfo.getKey() +
-                    " requires min Geonetwork version: " + minorAppVersionSupported + ", current is: " +
-                    version + ". Skip load schema.");
+                        " requires min Geonetwork version: " + minorAppVersionSupported + ", current is: " +
+                        version + ". Skip load schema.");
                 removes.add(schemaInfo.getKey());
                 continue;
             }
@@ -1383,8 +1383,8 @@ public class SchemaManager {
 
                 if (appVersion.compareTo(schemaMajorAppVersion) > 0) {
                     Log.error(Geonet.SCHEMA_MANAGER, "Schema " + schemaInfo.getKey() +
-                        " requires max Geonetwork version: " + majorAppVersionSupported + ", current is: " +
-                        version + ". Skip load schema.");
+                            " requires max Geonetwork version: " + majorAppVersionSupported + ", current is: " +
+                            version + ". Skip load schema.");
                     removes.add(schemaInfo.getKey());
                 }
             }
@@ -1519,7 +1519,7 @@ public class SchemaManager {
         Element root = Xml.loadFile(xmlIdFile);
         Element filters = root.getChild("filters", GEONET_SCHEMA_NS);
         Map<String, MetadataSchemaOperationFilter> filterRules =
-            new HashMap<>();
+                new HashMap<>();
         if (filters == null) {
             return filterRules;
         } else {
@@ -1532,7 +1532,7 @@ public class SchemaManager {
                     Element markedElement = ruleElement.getChild("keepMarkedElement", GEONET_SCHEMA_NS);
 
                     if (StringUtils.isNotBlank(ifNotOperation) &&
-                        StringUtils.isNotBlank(xpath)) {
+                            StringUtils.isNotBlank(xpath)) {
                         MetadataSchemaOperationFilter filter = new MetadataSchemaOperationFilter(xpath, jsonpath, ifNotOperation, markedElement);
                         filterRules.put(ifNotOperation, filter);
                     }
@@ -1689,7 +1689,7 @@ public class SchemaManager {
                                 Log.debug(Geonet.SCHEMA_MANAGER, "				Comparing " + Xml.getString(kid) + " with " + md.getName() + " with namespace " + md.getNamespace() + " : " + (kid.getName().equals(md.getName()) && kid.getNamespace().equals(md.getNamespace())));
                             }
                             if (kid.getName().equals(md.getName()) &&
-                                kid.getNamespace().equals(md.getNamespace())) {
+                                    kid.getNamespace().equals(md.getNamespace())) {
                                 match = true;
                                 break;
                             } else {
