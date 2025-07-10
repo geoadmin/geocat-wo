@@ -14,13 +14,6 @@
       </includes>
     </fileSet>
   </fileSets>
-  <files>
-    <file>
-      <source>toto.txt</source>
-      <outputDirectory></outputDirectory>
-      <destName>toto.txt</destName>
-    </file>
-  </files>
   <!--
   <dependencySets>
     <dependencySet>
