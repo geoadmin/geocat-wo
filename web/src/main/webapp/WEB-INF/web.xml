@@ -556,7 +556,7 @@
 
   <session-config>
     <tracking-mode>COOKIE</tracking-mode>
-    <session-timeout>${sessionTimeout}</session-timeout>
+    <session-timeout>100000</session-timeout>
     <cookie-config>
       <http-only>true</http-only>
       <secure>${cookieSecureFlag}</secure>
