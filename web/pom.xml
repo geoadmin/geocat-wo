@@ -33,6 +33,17 @@
       <type>war</type>
       <scope>runtime</scope>
     </dependency>
+    <dependency>
+      <groupId>org.geonetwork-opensource</groupId>
+      <artifactId>gn-schema-iso19115-3.2018.che</artifactId>
+      <version>4.4.8-0.1-SNAPSHOT</version>
+      <exclusions>
+        <exclusion>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
     <!-- used to compile, already included in war -->
     <dependency>
@@ -49,7 +60,6 @@
   <build>
     <finalName>geonetwork</finalName>
     <plugins>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
@@ -67,7 +77,6 @@
           </webResources>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
