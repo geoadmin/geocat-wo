@@ -292,10 +292,11 @@
     <for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
       <directiveAttributes
               data-transformation="to-iso19115-3.2018-keyword"
-              data-include="xpath::string-join(*
+              data-include="xpath::string-join((*
                                           //mri:thesaurusName//cit:identifier/*/
                                             mcc:code/gcx:Anchor/
-                                              concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), ',')"/>
+                                              concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), '-external.none.allThesaurus,-external.theme.access_use_conditions'), ',')"
+              data-allow-free-text-keywords="false"/>
     </for>
   </fields>
 
@@ -617,7 +618,29 @@
         <for name="gfc:listedValue"/>
       </flatModeExceptions>
 
-      <thesaurusList defaultTransformation="to-iso19115-3.2018-keyword-with-anchor"/>
+      <thesaurusList>
+        <thesaurus key="external.theme.gemet"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.inspire-theme"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.gemet-theme"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.inspire-service-taxonomy"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="local.theme.geocat.ch"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.none.allThesaurus"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialDataServiceCategory-SpatialDataServiceCategory"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink-with-anchor"
+        />
+      </thesaurusList>
     </view>
 
 
