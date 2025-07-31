@@ -118,6 +118,9 @@
               <outputDirectory>${build.webapp.resources}</outputDirectory>
               <resources>
                 <resource>
+                  <excludes>
+                    <exclude>**/config-editor.xml</exclude>
+                  </excludes>
                   <directory>${project.basedir}/../iso19115-3.2018.che/src/main/plugin</directory>
                   <targetPath>WEB-INF/data/config/schema_plugins</targetPath>
                 </resource>
