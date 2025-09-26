@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+sed -i "s/db_username/${DB_USERNAME}/" /opt/geonetwork/WEB-INF/config-db/jdbc.properties
+sed -i "s/db_name/${DB_NAME}/" /opt/geonetwork/WEB-INF/config-db/jdbc.properties
+sed -i "s/db_host/${DB_HOST}/" /opt/geonetwork/WEB-INF/config-db/pwd
+sed -i "s/db_password/${DB_PASSWORD}/" /opt/geonetwork/WEB-INF/config-db/jdbc.properties
+
 export JAVA_OPTIONS="${JAVA_OPTS} ${GN_CONFIG_PROPERTIES}"
 
 GN_BASE_DIR=/opt/geonetwork
