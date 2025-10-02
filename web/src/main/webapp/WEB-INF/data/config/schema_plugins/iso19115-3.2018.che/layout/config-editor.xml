@@ -162,6 +162,26 @@
               data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"
               data-insert-modes="xlink"/>
     </for>
+    <for name="mri:resourceFormat" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="false"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="format"
+              data-filter='{"root": "mrd:MD_Format"}'
+              data-show-valid-only="true"
+              data-insert-modes="xlink"/>
+    </for>
+    <for name="mrd:distributionFormat" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="false"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="format"
+              data-filter='{"root": "mrd:MD_Format"}'
+              data-show-valid-only="true"
+              data-insert-modes="xlink"/>
+    </for>
     <for name="mrl:processor" addDirective="data-gn-directory-entry-selector">
       <directiveAttributes
         data-template-add-snippet="&lt;cit:CI_Responsibility
@@ -250,16 +270,6 @@
         data-template-type="extent"
         data-filter='{"root": "gex:EX_Extent"}'
         data-insert-modes="xlink"/>
-    </for>
-
-    <for name="mrd:distributionFormat" addDirective="data-gn-directory-entry-selector">
-      <directiveAttributes
-              data-template-add-action="true"
-              data-search-action="true"
-              data-popup-action="false"
-              data-template-type="format"
-              data-filter='{"root": "mrd:MD_Format"}'
-              data-insert-modes="xlink"/>
     </for>
 
     <for name="cit:logo" addDirective="data-gn-directory-entry-selector">
