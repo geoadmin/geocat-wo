@@ -649,7 +649,10 @@
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
         <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialDataServiceCategory-SpatialDataServiceCategory"
-                   transformations="to-iso19115-3.2018-keyword-as-xlink-with-anchor"
+                   transformations="to-iso19115-3.2018-keyword-with-anchor"
+        />
+        <thesaurus key="external.place.regions"
+                   transformations="to-iso19115-3.2018-keyword-with-anchor"
         />
       </thesaurusList>
     </view>
@@ -792,7 +795,32 @@
                  in="/che:CHE_MD_Metadata"/>
       </tab>
 
-      <thesaurusList defaultTransformation="to-iso19115-3.2018-keyword-with-anchor"/>
+      <thesaurusList>
+        <thesaurus key="external.theme.gemet"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.inspire-theme"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.gemet-theme"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.inspire-service-taxonomy"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="local.theme.geocat.ch"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.none.allThesaurus"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
+        />
+        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialDataServiceCategory-SpatialDataServiceCategory"
+                   transformations="to-iso19115-3.2018-keyword-with-anchor"
+        />
+        <thesaurus key="external.place.regions"
+                   transformations="to-iso19115-3.2018-keyword-with-anchor"
+        />
+      </thesaurusList>
     </view>
     <view name="xml">
       <sidePanel>
