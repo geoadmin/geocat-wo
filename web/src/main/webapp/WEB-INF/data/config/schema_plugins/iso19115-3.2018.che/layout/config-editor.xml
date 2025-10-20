@@ -530,7 +530,8 @@
       <sidePanel>
         <directive data-gn-need-help="creating-metadata"/>
         <directive data-gn-overview-manager=""
-                   data-file-types=".png,.gif,.jpeg,.jpg"/>
+                   data-file-types=".png,.gif,.jpeg,.jpg"
+                   data-editable-thumbnail="true"/>
 
         <directive data-gn-distribution-resources-panel="gnCurrentEdit.metadata"
                    data-mode="viewConfig.distributionConfig.layout || ''"
@@ -659,7 +660,8 @@
       <sidePanel>
         <directive data-gn-need-help="creating-metadata"/>
         <directive data-gn-overview-manager=""
-                   data-file-types=".png,.gif,.jpeg,.jpg"/>
+                   data-file-types=".png,.gif,.jpeg,.jpg"
+                   data-editable-thumbnail="true"/>
 
         <directive data-gn-distribution-resources-panel="gnCurrentEdit.metadata"
                    data-mode="viewConfig.distributionConfig.layout || ''"
@@ -796,7 +798,8 @@
       <sidePanel>
         <directive data-gn-need-help="creating-metadata"/>
         <directive data-gn-overview-manager=""
-                   data-file-types=".png,.gif,.jpeg,.jpg"/>
+                   data-file-types=".png,.gif,.jpeg,.jpg"
+                   data-editable-thumbnail="true"/>
 
         <directive data-gn-distribution-resources-panel="gnCurrentEdit.metadata"
                    data-mode="viewConfig.distributionConfig.layout || ''"
