@@ -6,7 +6,7 @@
   <parent>
     <groupId>swiss-experiment</groupId>
     <artifactId>geonetwork</artifactId>
-    <version>4.4.8-0</version>
+    <version>4.4.9-0</version>
   </parent>
 
   <artifactId>web</artifactId>
@@ -21,7 +21,7 @@
   <properties>
     <build.webapp.resources>${project.build.directory}/webapp</build.webapp.resources>
     <jetty.env>jetty-env.xml</jetty.env>
-    <gn.version>4.4.8-SEBR72-SNAPSHOT</gn.version>
+    <gn.version>4.4.10-SEBR72-SNAPSHOT</gn.version>
   </properties>
 
   <dependencies>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>org.geonetwork-opensource</groupId>
       <artifactId>gn-schema-iso19115-3.2018.che</artifactId>
-      <version>4.4.8-0.1-SNAPSHOT</version>
+      <version>4.4.9-0.1-SNAPSHOT</version>
       <exclusions>
         <exclusion>
             <groupId>org.quartz-scheduler</groupId>

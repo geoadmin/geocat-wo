@@ -23,7 +23,7 @@ RUN apt-get -y update && \
     chown -R jetty:jetty /opt/geonetwork
 
 USER jetty
-ENV GN_VERSION 4.4.8-0
+ENV GN_VERSION=4.4.9-0
 
 COPY geonetwork-${GN_VERSION}-swiss-custom.zip /opt/geonetwork/geonetwork-${GN_VERSION}-swiss-custom.zip
 RUN cd /opt/geonetwork/ && \
