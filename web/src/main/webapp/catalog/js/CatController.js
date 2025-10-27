@@ -444,6 +444,14 @@
                     }
                   }
                 },
+                aggs: {
+                  keep_nonzero: {
+                    bucket_selector: {
+                      buckets_path: { count: "_count" },
+                      script: "params.count > 0"
+                    }
+                  }
+                },
                 meta: {
                   decorator: {
                     type: "icon",
@@ -699,6 +707,25 @@
                 tooltip: "Grid",
                 icon: "fa-th",
                 related: []
+              },
+              {
+                tplUrl:
+                  "../../catalog/components/" +
+                  "search/resultsview/partials/viewtemplates/list.html",
+                tooltip: "List",
+                icon: "fa-bars",
+                related: ["parent", "children", "services", "datasets"]
+              },
+              {
+                tplUrl:
+                  "../../catalog/components/" +
+                  "search/resultsview/partials/viewtemplates/table.html",
+                tooltip: "Table",
+                icon: "fa-table",
+                related: [],
+                source: {
+                  exclude: ["resourceAbstract*", "Org*", "contact*"]
+                }
               }
             ],
             // Optional. If not set, the first resultViewTpls is used.
@@ -1021,6 +1048,23 @@
                   collapsed: true
                 }
               },
+              "indexingErrorMsg.type": {
+                terms: {
+                  field: "indexingErrorMsg.type",
+                  size: 2
+                },
+                meta: {
+                  collapsed: true,
+                  decorator: {
+                    type: "icon",
+                    prefix: "fa fa-fw ",
+                    map: {
+                      error: "fa-exclamation-circle",
+                      warning: "fa-exclamation-triangle"
+                    }
+                  }
+                }
+              },
               sourceCatalogue: {
                 terms: {
                   field: "sourceCatalogue",
@@ -1214,6 +1258,14 @@
                       query_string: {
                         query: "+linkProtocol:/OGC:WFS.*/"
                       }
+                    }
+                  }
+                },
+                aggs: {
+                  keep_nonzero: {
+                    bucket_selector: {
+                      buckets_path: { count: "_count" },
+                      script: "params.count > 0"
                     }
                   }
                 }
@@ -2022,6 +2074,17 @@
                       return true;
                     }
                     return false;
+                  };
+                  me["is" + profile + "OrMoreForGroup"] = function (groupId) {
+                    if ("Administrator" == profile) {
+                      return me.admin;
+                    }
+                    var allowedProfiles = $scope.profiles.slice(
+                      $scope.profiles.indexOf(profile)
+                    );
+                    return allowedProfiles.some(function (p) {
+                      return me["is" + p + "ForGroup"](groupId);
+                    });
                   };
                 });
                 angular.extend($scope.user, me);
