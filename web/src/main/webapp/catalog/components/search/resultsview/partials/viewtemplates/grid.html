@@ -67,7 +67,7 @@
         <div class="gn-md-details">
           <div class="gn-md-abstract text-muted">
             <div class="ellipsis">
-              <p>{{md.resourceAbstract.split('\n')[0] | striptags}}</p>
+              <p>{{::abstractBriefMaker(md.resourceAbstract) | striptags}}</p>
             </div>
           </div>
         </div>
@@ -88,16 +88,6 @@
     >
       <div data-gn-status-badge="md"></div>
       <div class="gn-toolbar">
-        <div class="pull-left">
-          <strong>
-            <i data-ng-if="::md.isHarvested == 'true'"
-               title="{{'harvestedRecord' | translate}}"
-               class="fa fa-fw fa-cloud-download text-primary"></i>
-            <i class="fa fa-fw"
-               data-ng-class="::md.isPublishedToAll ?
-              'fa-unlock text-success' : 'fa-lock text-warning'"></i>
-          </strong>
-        </div>
         <gn-links-btn class="pull-right"></gn-links-btn>
         <!-- <div data-gn-related-dropdown="md" data-user="user"></div>-->
       </div>
