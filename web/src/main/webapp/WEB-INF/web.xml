@@ -206,7 +206,11 @@
     -->
     <init-param>
       <param-name>mode</param-name>
-      <param-value>SAMEORIGIN</param-value>
+      <param-value>ALLOW-FROM</param-value>
+    </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>https://*.admin.ch https://*.cartoriviera.ch https://*.vsgis.ch http://ext.fr.ch  http://mapplus.vdf.loc http://mapplus01.vdf.loc https://*.ne.ch https://*.cartolacote.ch https://*.geomapfish.dev</param-value>
     </init-param>
     <!-- Allowed url. Used in ALLOW-FROM mode only -->
     <!--<init-param>
@@ -558,7 +562,7 @@
 
   <session-config>
     <tracking-mode>COOKIE</tracking-mode>
-    <session-timeout>${sessionTimeout}</session-timeout>
+    <session-timeout>30</session-timeout>
     <cookie-config>
       <http-only>true</http-only>
       <secure>${cookieSecureFlag}</secure>
