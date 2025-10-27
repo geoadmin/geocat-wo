@@ -353,9 +353,10 @@ public class Importer {
                     if (org.apache.commons.lang.StringUtils.isNotEmpty(groupId)) {
                         groupIdVal = Integer.parseInt(groupId);
                     }
-
-                    // Validate xsd and schematron
-                    metadataValidator.validateExternalMetadata(schema, metadata, context, " ", groupIdVal);
+                    if (isTemplate != MetadataType.SUB_TEMPLATE) {
+                        // Validate xsd and schematron
+                        metadataValidator.validateExternalMetadata(schema, metadata, context, " ", groupIdVal);
+                    }
                 }
 
                 try {
@@ -442,8 +443,17 @@ public class Importer {
                     AbstractMetadata md = metadataUtils.findOne(iMetadataId);
 
                     if (md != null) {
-                        // Persist the validation status
-                        metadataValidator.doValidate(md, context.getLanguage());
+                        if (isTemplate == MetadataType.SUB_TEMPLATE) {
+                            // Validate xsd and schematron
+                            MetadataValidation metadataValidation = new MetadataValidation()
+                                    .setId(new MetadataValidationId(md.getId(), "subtemplate"))
+                                    .setStatus(MetadataValidationStatus.VALID)
+                                    .setRequired(true).setNumTests(0).setNumFailures(0);
+                            context.getBean(MetadataValidationRepository.class).save(metadataValidation);
+                        } else {
+                            // Persist the validation status
+                            metadataValidator.doValidate(md, context.getLanguage());
+                        }
                     }
                 }
 
