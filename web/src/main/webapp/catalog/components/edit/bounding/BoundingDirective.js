@@ -187,6 +187,7 @@
                   srsName && srsName.length === 2 ? srsName[1] : "EPSG:4326";
 
                 ctrl.dataOlProjection = ol.proj.get(ctrl.dataProjection);
+                //ol.proj.get('EPSG:4326').axisOrientation_='enu';
 
                 if (ctrl.dataOlProjection) {
                   if (!isProjAvailable(ctrl.dataProjection)) {
@@ -200,6 +201,7 @@
 
                   // parse first feature from source XML & set geometry name
                   try {
+                    ctrl.outputPolygonXml = surroundWithWrapper((" " + ctrl.polygonXml).slice(1));
                     var geometry = gnGeometryService.parseGeometryInput(
                       ctrl.map,
                       ctrl.polygonXml,
@@ -226,12 +228,12 @@
                   source.clear();
                   source.addFeature(feature);
                 }
-                ctrl.updateOutput(feature, true);
+                ctrl.updateOutput(feature, true, false);
               }
             };
 
             // update output with gml
-            ctrl.updateOutput = function (feature, forceFitView) {
+            ctrl.updateOutput = function (feature, forceFitView, allowWrite = true) {
               if (!feature) return;
 
               // fit view if geom is valid & not empty
@@ -253,7 +255,7 @@
               ctrl.dataOlProjection = ol.proj.get(outputCrs);
 
               // print output (skip if readonly)
-              if (!ctrl.readOnly) {
+              if (!ctrl.readOnly && allowWrite) {
                 // GML 3.2.1 is used for ISO19139:2007
                 // TODO: ISO19115-3:2018
                 ctrl.outputPolygonXml = surroundWithWrapper(
