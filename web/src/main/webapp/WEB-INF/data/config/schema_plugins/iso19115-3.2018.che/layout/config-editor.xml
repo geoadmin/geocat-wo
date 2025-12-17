@@ -479,6 +479,7 @@
       <name>srv:name</name>
       <name>srv:operationName</name>
       <name>srv:serviceTypeVersion</name>
+      <name>srv:serviceType</name>
       <name>che:durationOfConservation</name>
     </exclude>
   </multilingualFields>
