@@ -1,6 +1,6 @@
 FROM jetty:9-jdk11
 
-ENV DATA_DIR /catalogue-data
+ENV DATA_DIR /mnt/geonetwork_data/
 ENV WEBAPP_CONTEXT_PATH /geonetwork
 ENV GN_CONFIG_PROPERTIES -Dgeonetwork.dir=${DATA_DIR} \
         -Dgeonetwork.formatter.dir=${DATA_DIR}/data/formatter \
