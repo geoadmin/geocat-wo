@@ -621,7 +621,6 @@
       <flatModeExceptions>
         <for name="mri:descriptiveKeywords"/>
         <for name="mrl:processor"/>
-        <for name="cit:citedResponsibleParty"/>
         <for name="mri:pointOfContact"/>
         <for name="mdb:contact"/>
         <for name="mcc:processor"/>
