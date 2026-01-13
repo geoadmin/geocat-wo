@@ -16,6 +16,10 @@ RUN apt-get -y update && \
     apt-get -y install --no-install-recommends \
         curl \
         unzip && \
+    apt install -y python3-pip python3.12-venv && \
+    python3 -m venv /python_venv && \
+    . /python_venv/bin/activate && \
+    pip3 install awscli && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p ${DATA_DIR} && \
     chown -R jetty:jetty ${DATA_DIR} && \
