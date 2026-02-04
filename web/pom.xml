@@ -120,6 +120,33 @@
           </webResources>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack-schemas</id>
+            <phase>process-resources</phase>
+            <goals><goal>unpack</goal></goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.geonetwork-opensource</groupId>
+                  <artifactId>gn-schema-iso19115-3.2018.che</artifactId>
+                    <version>4.4.9-0.1-SNAPSHOT</version>
+                  <type>zip</type>
+                  <overWrite>false</overWrite>
+                  <outputDirectory>${build.webapp.resources}/WEB-INF/data/config/schema_plugins</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+              <excludes>**/config-editor.xml</excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
@@ -142,13 +169,6 @@
                 <resource>
                   <directory>${project.basedir}/../iso19139.che/src/main/config/codelist</directory>
                   <targetPath>WEB-INF/data/config/codelist</targetPath>
-                </resource>
-                <resource>
-                  <excludes>
-                    <exclude>**/config-editor.xml</exclude>
-                  </excludes>
-                  <directory>${project.basedir}/../iso19115-3.2018.che/src/main/plugin</directory>
-                  <targetPath>WEB-INF/data/config/schema_plugins</targetPath>
                 </resource>
                 <resource>
                   <directory>${project.basedir}/../iso19115-3.2018.che/src/main/config/codelist</directory>
