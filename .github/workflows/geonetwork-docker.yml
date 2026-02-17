@@ -37,10 +37,10 @@ jobs:
     - name: "Build docker container" 
       run: |
         cd release/target/docker/
-        docker build . -t docker.pkg.github.com/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+        docker build . -t ghcr.io/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
 
-    - name: "Login to docker.pkg.github.com"
-      run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} docker.pkg.github.com
+    - name: "Login to ghcr.io"
+      run: docker login -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
 
     - name: "Push to github packages"
-      run: docker push docker.pkg.github.com/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
+      run: docker push ghcr.io/geoadmin/geocat-wo/gn-with-swiss-overlay:${{ steps.version.outputs.VERSION }}-${{ github.run_number }}
