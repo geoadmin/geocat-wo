@@ -149,13 +149,8 @@
             uri: "*" + filter + "*" || "",
             lang: lang || "eng"
           };
-          if (outputLang) {
-            parameters["pLang"] = outputLang;
-          }
-          if (lang !== "eng") {
-            // Fallback in english if thesaurus has no translation in current record language
-            parameters["pLang"] = ["eng", lang];
-          }
+
+          parameters["pLang"] = ["eng", "roh", "ita", "ger", "fre"];
 
           return gnUrlUtils.append(
             "../api/registries/vocabularies/search",
