@@ -16,6 +16,7 @@ RUN apt-get -y update && \
     apt-get -y install --no-install-recommends \
         curl \
         unzip && \
+    apt install -y python3-pip python3.12-venv && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p ${DATA_DIR} && \
     chown -R jetty:jetty ${DATA_DIR} && \
@@ -34,6 +35,10 @@ RUN cd /opt/geonetwork/ && \
 COPY jetty/geonetwork_context_template.xml /usr/local/share/geonetwork/geonetwork_context_template.xml
 COPY jetty/jetty-http.xml /usr/local/jetty/etc/jetty-http.xml
 COPY ./docker-entrypoint.sh /geonetwork-entrypoint.sh
+
+RUN python3 -m venv /opt/geonetwork/python_venv && \
+    . /opt/geonetwork/python_venv/bin/activate && \
+    pip3 install awscli
 
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
 
