@@ -644,7 +644,7 @@
         <thesaurus key="external.theme.inspire-service-taxonomy"
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
-        <thesaurus key="external.theme.geocat.ch"
+        <thesaurus key="local.theme.geocat.ch"
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
         <thesaurus key="external.none.allThesaurus"
@@ -813,7 +813,7 @@
         <thesaurus key="external.theme.inspire-service-taxonomy"
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
-        <thesaurus key="external.theme.geocat.ch"
+        <thesaurus key="local.theme.geocat.ch"
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
         <thesaurus key="external.none.allThesaurus"
