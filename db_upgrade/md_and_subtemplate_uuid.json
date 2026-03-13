@@ -1,0 +1,28 @@
+{
+  "from": 0,
+  "size": 15000,
+  "query": {
+    "function_score": {
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "terms": {
+                "isTemplate": [
+                  "t", "s", "n"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "_source": {
+    "includes": [
+      "id",
+      "uuid"
+    ]
+  },
+  "track_total_hits": true
+}
