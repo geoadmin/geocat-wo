@@ -168,21 +168,29 @@ public class Importer {
                         // Important folder name to identify metadata should be ../../
                         lastUnknownMetadataFolderName = file.getParent().getParent().relativize(file);
 
-                        try {
-                            String metadataSchema = metadataSchemaUtils.autodetectSchema(metadata, null);
-                            // If local node doesn't know metadata
-                            // schema try to load next xml file.
-                            if (metadataSchema == null) {
-                                continue;
-                            }
+                        String metadataSchema = null;
 
-                            String currFile = "Found metadata file " + file.getParent().getParent().relativize(file);
-
-                            mdFiles.put(metadataSchema, Pair.read(currFile, metadata));
-
-                        } catch (NoSchemaMatchesException e) {
-                            Log.debug(Geonet.MEF, "No schema match for " + lastUnknownMetadataFolderName + ".");
+                        if (style.equals("schema:iso19115-3.2018.che:convert/fromISO19139.che") &&
+                                "CHE_MD_Metadata".equals(metadata.getName()) &&
+                                "http://www.geocat.ch/2008/che".equals(metadata.getNamespace().getURI())) {
+                            metadataSchema = "iso19115-3.2018.che";
+                            infoSchema = "iso19115-3.2018.che";
                         }
+                        if (metadataSchema == null) {
+                            try {
+                                metadataSchema = metadataSchemaUtils.autodetectSchema(metadata, null);
+                            } catch (NoSchemaMatchesException e) {
+                                Log.debug(Geonet.MEF, "No schema match for " + lastUnknownMetadataFolderName + ".");
+                            }
+                        }
+                        if (metadataSchema == null) {
+                            continue;
+                        }
+
+                        String currFile = "Found metadata file " + file.getParent().getParent().relativize(file);
+
+                        mdFiles.put(metadataSchema, Pair.read(currFile, metadata));
+
                     }
                 }
 
