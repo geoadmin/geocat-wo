@@ -651,10 +651,10 @@
                    transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
         <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialDataServiceCategory-SpatialDataServiceCategory"
-                   transformations="to-iso19115-3.2018-keyword-with-anchor"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
         <thesaurus key="external.place.regions"
-                   transformations="to-iso19115-3.2018-keyword-with-anchor"
+                   transformations="to-iso19115-3.2018-keyword-as-xlink"
         />
       </thesaurusList>
     </view>
