@@ -305,7 +305,7 @@
               data-include="xpath::string-join((*
                                           //mri:thesaurusName//cit:identifier/*/
                                             mcc:code/gcx:Anchor/
-                                              concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), '-external.none.allThesaurus,-external.theme.access_use_conditions'), ',')"
+                                              concat('-', substring-after(text()[. != ''], 'geonetwork.thesaurus.')), '-external.none.allThesaurus,-external.theme.access_use_conditions,-external.place.regions'), ',')"
               data-allow-free-text-keywords="false"/>
     </for>
   </fields>
