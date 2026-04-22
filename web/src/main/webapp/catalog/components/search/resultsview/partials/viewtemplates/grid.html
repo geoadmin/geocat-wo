@@ -79,11 +79,10 @@
     </div>
     <!-- /.gn-card-body -->
 
-    <div class="panel-footer gn-card-footer clearfix">
+    <div class="panel-footer gn-card-footer">
       <div data-gn-record-origin-logo="md"></div>
-      <div class="break"></div>
-      <div  class="gn-toolbar ">
-        <div class="pull-left">
+      <div  class="gn-toolbar gn-toolbar-flex">
+        <div>
           <strong>
             <i data-ng-if="::md.isHarvested == 'true'"
                title="{{'harvestedRecord' | translate}}"
@@ -93,7 +92,7 @@
               'fa-unlock text-success' : 'fa-lock text-warning'"></i>
           </strong>
         </div>
-        <gn-links-btn class="pull-right"></gn-links-btn>
+        <gn-links-btn class="gn-links-btn-right"></gn-links-btn>
         <!-- <div data-gn-related-dropdown="md" data-user="user"></div>-->
       </div>
     </div>
