@@ -6,7 +6,7 @@
 @gn-card-height: 24em;
 @gn-card-height-map: 18em;
 @gn-card-header-height: 60px;
-@gn-card-footer-height: 52px;
+@gn-card-footer-height: 64px;
 
 // thumbnail
 .gn-md-thumbnail {
@@ -228,6 +228,9 @@
     }
     .gn-toolbar {
       flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .gn-md-category {
       margin: 10px 0;
@@ -238,6 +241,9 @@
       span {
         margin-right: 5px;
       }
+    }
+    .gn-links-btn-right {
+      margin-left: auto;
     }
   }
   &:hover, &.gn-record-selected {
