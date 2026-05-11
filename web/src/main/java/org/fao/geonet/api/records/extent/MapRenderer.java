@@ -237,7 +237,7 @@ public class MapRenderer {
             for (int i = 0; i < geom.getNumGeometries(); i++) {
                 Geometry geomExtent = MapRenderer.getGeometryExtent(geom.getGeometryN(i), srs, useGeodesicExtents);
                 // draw each included geometry separately to ensure they are filled correctly
-                Shape shape = worldToScreenTransform.createTransformedShape(shapeWriter.toShape(geomExtent));
+                Shape shape = worldToScreenTransform.createTransformedShape(shapeWriter.toShape(geom.getGeometryN(i)));
                 graphics.setColor(geomFillColor);
                 graphics.fill(shape);
 
