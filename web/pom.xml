@@ -95,7 +95,7 @@
                   <outputDirectory>${build.webapp.resources}/WEB-INF/data/config/schema_plugins</outputDirectory>
                 </artifactItem>
               </artifactItems>
-              <excludes>**/config-editor.xml</excludes>
+              <excludes>**/config-editor.xml,iso19115-3.2018.che/loc/eng/codelists.xml,iso19115-3.2018.che/loc/ita/codelists.xml,iso19115-3.2018.che/loc/ger/codelists.xml,iso19115-3.2018.che/loc/fre/codelists.xml</excludes>
             </configuration>
           </execution>
         </executions>
@@ -120,6 +120,10 @@
                 <resource>
                   <excludes>
                     <exclude>**/config-editor.xml</exclude>
+                    <exclude>*/loc/eng/codelists.xml</exclude>
+                    <exclude>*/loc/ita/codelists.xml</exclude>
+                    <exclude>*/loc/fre/codelists.xml</exclude>
+                    <exclude>*/loc/ger/codelists.xml</exclude>
                   </excludes>
                   <directory>${project.basedir}/../iso19115-3.2018.che/src/main/plugin</directory>
                   <targetPath>WEB-INF/data/config/schema_plugins</targetPath>
