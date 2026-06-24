@@ -1,0 +1,2740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codelists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0"
+           xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
+           xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0"
+           xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+           xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+           xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+           xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0"
+           xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+           xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+           xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0"
+           xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
+           xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0"
+           xmlns:reg="http://standards.iso.org/iso/19135/-2/reg/1.0"
+           xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0"
+           xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+           xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+           xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0"
+           xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0"
+           xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+           xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+           xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0"
+           xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+           xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0"
+           xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+           xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0"
+           xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+           xmlns:gml="http://www.opengis.net/gml/3.2"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xsi:noNamespaceSchemaLocation="../../../../../../../schema-labels.xsd">
+	<codelist name="cit:CI_TelephoneTypeCode">
+    <description>Telefon-Typ</description>
+    <entry>
+      <code>voice</code>
+      <label>Sprachdienst</label>
+      <description>Telefon mit Sprachdienst</description>
+    </entry>
+    <entry>
+      <code>facsimile</code>
+      <label>Fax</label>
+      <description>Telefon mit Fax-Dienst</description>
+    </entry>
+    <entry>
+      <code>sms</code>
+      <label>SMS</label>
+      <description>Telefon mit SMS-Dienst</description>
+    </entry>
+  </codelist>
+  <codelist name="cit:CI_DateTypeCode">
+    <description>Art des Datums bzw. Ereignis, auf das sich das Datum bezieht</description>
+    <entry>
+      <code>creation</code>
+      <label>Erstellung</label>
+      <description>Das Datum gibt an, wann die Ressource erstmalig erstellt wurde</description>
+    </entry>
+    <entry>
+      <code>publication</code>
+      <label>Publikation</label>
+      <description>Das Datum gibt an, wann die Ressource erstmalig publiziert wurde</description>
+    </entry>
+    <entry>
+      <code>revision</code>
+      <label>Aktualisierung</label>
+      <description>Das Datum gibt an, wann die Ressource zuletzt überprüft/aktualisiert wurde</description>
+    </entry>
+    <entry>
+      <code>expiry</code>
+      <label>Ablaufdatum</label>
+      <description>Das Datum gibt an, wann die Gültigkeit der Ressource verfällt</description>
+    </entry>
+    <entry>
+      <code>lastUpdate</code>
+      <label>Letzte Aktualisierung</label>
+      <description>Das Datum gibt an, wann die Ressource das letzte Mal aktualisiert wurde</description>
+    </entry>
+    <entry>
+      <code>lastRevision</code>
+      <label>Letzte Überprüfung</label>
+      <description>Das Datum gibt an, wann die Ressource das letzte Mal überprüft wurde</description>
+    </entry>
+    <entry>
+      <code>nextUpdate</code>
+      <label>Nächste Aktualisierung</label>
+      <description>Das Datum gibt an, wann die Ressource erneut aktualisiert wird</description>
+    </entry>
+    <entry>
+      <code>unavailable</code>
+      <label>Keine Verfügbarkeit</label>
+      <description>Das Datum gibt an, wann die Ressource nicht mehr verfügbar ist oder nicht mehr beschafft werden kann.</description>
+    </entry>
+    <entry>
+      <code>inForce</code>
+      <label>Inkraftsetzung</label>
+      <description>Das Datum gibt an, wann die Ressource in Kraft gesetzt wurde</description>
+    </entry>
+    <entry>
+      <code>adopted</code>
+      <label>Verabschiedung</label>
+      <description>Das Datum gibt an, wann die Ressource angenommen wurde</description>
+    </entry>
+    <entry>
+      <code>deprecated</code>
+      <label>Abgewertet</label>
+      <description>Das Datum gibt an, wann die Ressource abgewertet wurde</description>
+    </entry>
+    <entry>
+      <code>superseded</code>
+      <label>Ersetzt</label>
+      <description>Das Datum gibt an, wann die Ressource ersetzt wurde</description>
+    </entry>
+    <entry>
+      <code>validityBegins</code>
+      <label>Gültigkeitsbeginn</label>
+      <description>Zeitpunkt, zu dem die Daten als gültig betrachtet wurden.
+      ANMERKUNG: Es könnte eine Verzögerung zwischen der Erstellung und dem Beginn der Gültigkeit geben
+      </description>
+    </entry>
+    <entry>
+      <code>validityExpires</code>
+      <label>Gültigkeitsende</label>
+      <description>Zeitpunkt, zu dem die Daten nicht mehr als gültig betrachtet werden</description>
+    </entry>
+    <entry>
+      <code>released</code>
+      <label>Bereitstellung</label>
+      <description>Das Datum, an dem die Ressource für den öffentlichen Zugang bereitgestellt werden soll</description>
+    </entry>
+    <entry>
+      <code>distribution</code>
+      <label>Vertrieb</label>
+      <description>Das Datum gibt an, wann eine Ressource verteilt wurde</description>
+    </entry>
+  </codelist>
+  <codelist name="cit:CI_OnLineFunctionCode" alias="function">
+    <description>Funktionalität der Online-Verbindung</description>
+    <entry>
+      <code>download</code>
+      <label>Datentransfer: Download</label>
+      <description>Anleitung zum Online-Datentransfer von einem Gerät oder Speichersystem auf ein anderes</description>
+    </entry>
+    <entry>
+      <code>information</code>
+      <label>Information</label>
+      <description>Online-Informationen zur Ressource</description>
+    </entry>
+    <entry>
+      <code>offlineAccess</code>
+      <label>Offline-Zugang</label>
+      <description>Online-Anleitung zum Offline-Bezug der Ressource</description>
+    </entry>
+    <entry>
+      <code>order</code>
+      <label>Bestellung</label>
+      <description>Online-Bestellung der Ressource</description>
+    </entry>
+    <entry>
+      <code>search</code>
+      <label>Suche</label>
+      <description>Online-Suche nach Informationen zur Ressource</description>
+    </entry>
+    <entry>
+      <code>completeMetadata</code>
+      <label>Vollständige Metadaten</label>
+      <description>Vollständig bereitgestellte Metadaten</description>
+    </entry>
+    <entry>
+      <code>doi</code>
+      <label>Digital Object Identifier (DOI)</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>browseGraphic</code>
+      <label>Grafische Darstellung</label>
+      <description>Zur Verfügung gestellte Grafik</description>
+    </entry>
+    <entry>
+      <code>upload</code>
+      <label>Datentransfer: Upload</label>
+      <description>Bereitstellung der Möglichkeit zum Hochladen von Online-Ressourcen</description>
+    </entry>
+    <entry>
+      <code>emailService</code>
+      <label>Email-Service</label>
+      <description>Bereitgestellter Online-Email-Dienst</description>
+    </entry>
+    <entry>
+      <code>browsing</code>
+      <label>Browsing</label>
+      <description>Bereitgestelltes Online-Browsing</description>
+    </entry>
+    <entry>
+      <code>fileAccess</code>
+      <label>Datei-Zugriff</label>
+      <description>Zugriff auf eine bereitgestellte Online-Datei</description>
+    </entry>
+  </codelist>
+  <codelist name="cit:CI_PresentationFormCode">
+    <entry>
+      <code>documentDigital</code>
+      <label>Digitales Dokument</label>
+      <description>Digitales Dokument mit Text und möglicherweise Abbildungen</description>
+    </entry>
+    <entry>
+      <code>imageDigital</code>
+      <label>Digitales Bild</label>
+      <description>Aspekte durch Fernerkundung, im digitalen Format gespeichert</description>
+    </entry>
+    <entry>
+      <code>documentHardcopy</code>
+      <label>Papierdokument</label>
+      <description>Papierdokument mit Text und möglicherweise Abbildungen</description>
+    </entry>
+    <entry>
+      <code>imageHardcopy</code>
+      <label>Papierbild</label>
+      <description>Aspekte durch Fernerkundung, auf einem vom Menschen nutzbaren Medium reproduziert</description>
+    </entry>
+    <entry>
+      <code>mapDigital</code>
+      <label>Digitale Karte</label>
+      <description>Digitale Karte im Raster- oder Vektorformat</description>
+    </entry>
+    <entry>
+      <code>mapHardcopy</code>
+      <label>Papierkarte</label>
+      <description>Karte, die auf Papier oder einem anderen vom Menschen nutzbaren Medium gedruckt ist</description>
+    </entry>
+    <entry>
+      <code>modelDigital</code>
+      <label>Digitales Geländemodell</label>
+      <description>3D-Digitalmodell in digitaler Form</description>
+    </entry>
+    <entry>
+      <code>modelHardcopy</code>
+      <label>Physisches Modell</label>
+      <description>Physisches 3D-Digitalmodell</description>
+    </entry>
+    <entry>
+      <code>profileDigital</code>
+      <label>Digitales Profil</label>
+      <description>Vertikales Profil in digitaler Form</description>
+    </entry>
+    <entry>
+      <code>profileHardcopy</code>
+      <label>Papierprofil</label>
+      <description>Vertikales Profil in Papierform</description>
+    </entry>
+    <entry>
+      <code>tableDigital</code>
+      <label>Digitale Tabelle</label>
+      <description>Digitale Darstellung von Informationen in Spaltenform</description>
+    </entry>
+    <entry>
+      <code>tableHardcopy</code>
+      <label>Papiertabelle</label>
+      <description>Darstellung von Informationen in Spaltenform auf Papier oder anderem vom Menschen nutzbaren Medium</description>
+    </entry>
+    <entry>
+      <code>videoDigital</code>
+      <label>Digitales Video</label>
+      <description>Digitales Video</description>
+    </entry>
+    <entry>
+      <code>videoHardcopy</code>
+      <label>Magnetvideo</label>
+      <description>Auf Band aufgezeichnetes Video</description>
+    </entry>
+    <entry>
+      <code>audioDigital</code>
+      <label>Digitale Audioaufnahme</label>
+      <description>Digitale Audioaufnahme</description>
+    </entry>
+    <entry>
+      <code>audioHardcopy</code>
+      <label>Analoge Audioaufnahme</label>
+      <description>Audioaufnahme auf analogem Medium, zB. Magnetband</description>
+    </entry>
+    <entry>
+      <code>multimediaDigital</code>
+      <label>Digitales Multimedia</label>
+      <description>Darstellung von Informationen mit verschiedenen digitalen Modi für Text, Ton und Bild</description>
+    </entry>
+    <entry>
+      <code>multimediaHardcopy</code>
+      <label>Analoges Multimedia</label>
+      <description>Darstellung von Informationen mit verschiedenen analogen Modi für Text, Ton und Bild</description>
+    </entry>
+    <entry>
+      <code>physicalObject</code>
+      <label>Physisches Objekt</label>
+      <description>Physisches Objekt. BEISPIEL: Gestein oder Mineralprobe, Objektträger für Mikroskop.</description>
+    </entry>
+    <entry>
+      <code>diagramDigital</code>
+      <label>Digitales Diagramm</label>
+      <description>Grafische Darstellung von Informationen durch Diagramme, wie Kreisdiagramm, Balkendiagramm usw., im digitalen Format gespeichert</description>
+    </entry>
+    <entry>
+      <code>diagramHardcopy</code>
+      <label>Papierdiagramm</label>
+      <description>Grafische Darstellung von Informationen durch Diagramme, wie Kreisdiagramm, Balkendiagramm usw., auf Papier, Fotomedium oder anderem Medium gedruckt</description>
+    </entry>
+  </codelist>
+  <codelist name="cit:CI_RoleCode" alias="roleCode">
+    <description>Funktion, welche die verantwortliche Stelle einnimmt</description>
+    <entry>
+      <code>resourceProvider</code>
+      <label>Anbieter</label>
+      <description>Anbieter der Ressource</description>
+    </entry>
+    <entry>
+      <code>custodian</code>
+      <label>Verwalter</label>
+      <description>Person oder Stelle, welche die Zuständigkeit für eine Ressource übernommen hat 
+        und seine sachgerechte Pflege und Wartung sichert
+      </description>
+    </entry>
+    <entry>
+      <code>owner</code>
+      <label>Eigentümer</label>
+      <description>Eigentümer der Ressource</description>
+    </entry>
+    <entry>
+      <code>user</code>
+      <label>Nutzer</label>
+      <description>Nutzer der Ressource</description>
+    </entry>
+    <entry>
+      <code>distributor</code>
+      <label>Verteiler</label>
+      <description>Person oder Stelle für den Vertrieb</description>
+    </entry>
+    <entry>
+      <code>originator</code>
+      <label>Urheber</label>
+      <description>Erzeuger der Ressource</description>
+    </entry>
+    <entry>
+      <code>pointOfContact</code>
+      <label>Ansprechpartner</label>
+      <description>Kontakt für Informationen zur Ressource oder deren Bezugsmöglichkeit</description>
+    </entry>
+    <entry>
+      <code>principalInvestigator</code>
+      <label>Projektleiter</label>
+      <description>Person oder Stelle, die verantwortlich für die Datenerhebung und -suche ist</description>
+    </entry>
+    <entry>
+      <code>processor</code>
+      <label>Bearbeiter</label>
+      <description>Person oder Stelle, die durch eine Datenbearbeitung die Ressourcen verändert</description>
+    </entry>
+    <entry>
+      <code>publisher</code>
+      <label>Herausgeber</label>
+      <description>Person oder Stelle, welche die Ressource publiziert</description>
+    </entry>
+    <entry>
+      <code>author</code>
+      <label>Autor</label>
+      <description>Person oder Stelle, welche die Ressource verfasst</description>
+    </entry>
+    <entry>
+      <code>sponsor</code>
+      <label>Sponsor</label>
+      <description>Person oder Stelle, welche die Ressource sponsert</description>
+    </entry>
+    <entry>
+      <code>coAuthor</code>
+      <label>Co-Autor</label>
+      <description>Person oder Stelle, welche gemeinsam Autor der Ressource ist.</description>
+    </entry>
+    <entry>
+      <code>collaborator</code>
+      <label>Mitarbeiter</label>
+      <description>Person oder Stelle, welche einen anderen Beitrag zur Generierung 
+        der Ressource leistet als der Hauptautor der Forschung
+      </description>
+    </entry>
+    <entry>
+      <code>editor</code>
+      <label>Editor</label>
+      <description>Person oder Stelle, welche die Ressource überprüft 
+        oder verändert hat um ihren Inhalt zu verbessern
+      </description>
+    </entry>
+    <entry>
+      <code>mediator</code>
+      <label>Mediator</label>
+      <description>Person oder Stelle, die den Zugang zu einer Ressource vermittelt 
+        und für wen die Ressource bestimmt oder nützlich ist
+      </description>
+    </entry>
+    <entry>
+      <code>rightsHolder</code>
+      <label>Rechtsinhaber</label>
+      <description>Person oder Stelle mit Besitz- oder Verwaltungsrechten gegenüber der Ressource</description>
+    </entry>
+    <entry>
+      <code>contributor</code>
+      <label>Mitwirkender</label>
+      <description>Person oder Stelle, welche zur Ressource beiträgt</description>
+    </entry>
+    <entry>
+      <code>funder</code>
+      <label>Investor</label>
+      <description>Person oder Stelle, welche finanzielle Unterstützung für die Ressource beiträgt</description>
+    </entry>
+    <entry>
+      <code>stakeholder</code>
+      <label>Stakeholder</label>
+      <description>Person oder Stelle, welche ein Interesse an der Ressource oder ihrer Nutzung hat</description>
+    </entry>
+  </codelist>
+  <codelist name="mdq:DQ_EvaluationMethodTypeCode">
+    <entry>
+      <code>directInternal</code>
+      <label>Direkte interne</label>
+      <description>Qualitätsbewertungsmethode für einen Datensatz, die auf der Analyse der Daten des Datensatzes basiert, wobei alle erforderlichen Daten intern im Datensatz enthalten sind.</description>
+    </entry>
+    <entry>
+      <code>directExternal</code>
+      <label>Direkte externe</label>
+      <description>Qualitätsbewertungsmethode für einen Datensatz, die auf der Analyse der Daten des Datensatzes basiert, bei der Verweise auf externe Daten erforderlich sind.</description>
+    </entry>
+    <entry>
+      <code>indirect</code>
+      <label>Indirekte</label>
+      <description>Qualitätsbewertungsmethode, die auf externem Wissen basiert.</description>
+    </entry>
+  </codelist>
+  <codelist name="mri:DS_AssociationTypeCode" alias="associationType">
+    <entry>
+      <code>crossReference</code>
+      <label>Querverweis</label>
+      <description>Bezug eines Datenbestands zu einem anderen</description>
+    </entry>
+    <entry>
+      <code>largerWorkCitation</code>
+      <label>Übergeordneter Datenbestand</label>
+      <description>Bezug zu einem übergeordneten Datenbestand, von dem dieser Datenbestand Teil ist</description>
+    </entry>
+    <entry>
+      <code>partOfSeamlessDatabase</code>
+      <label>Komponente einer gleichen Datenstruktur</label>
+      <description>Teil von einem gleichstrukturierten Satz von Daten, die in einem Computer sind</description>
+    </entry>
+    <entry>
+      <code>source</code>
+      <label>Quelle</label>
+      <description>Verweise auf die Quelle der Daten, die zur Erstellung der Karten verwendet wurden.</description>
+    </entry>
+    <entry>
+      <code>stereoMate</code>
+      <label>Stereobild</label>
+      <description>Teil eines Bildpaketes, welches bei gleichzeitiger Verwendung, dreidimensionale Bilder liefert</description>
+    </entry>
+    <entry>
+      <code>isComposedOf</code>
+      <label>Besteht aus</label>
+      <description>Verweis auf Ressourcen, die Teil dieser Ressource sind</description>
+    </entry>
+    <entry>
+      <code>collectiveTitle</code>
+      <label>Gemeinsamer Titel</label>
+      <description>Gemeinsamer Titel, der einer Ressourcensammlung gegeben wird.
+        ANMERKUNG: Der Titel identifiziert die Elemente einer Reihe gemeinsam, verbunden mit Informationen über den Umfang, welcher am Standort der Quelle verfügbar ist
+      </description>
+    </entry>
+    <entry>
+      <code>series</code>
+      <label>Serie</label>
+      <description>Verbunden zu einer Serie oder Datensammlung, wie z.B. einer gemeinsamen Produktspezifikation</description>
+    </entry>
+    <entry>
+      <code>dependency</code>
+      <label>Abhängigkeit</label>
+      <description>Verbunden durch eine Abhängigkeit.</description>
+    </entry>
+    <entry>
+      <code>revisionOf</code>
+      <label>Überarbeitung von</label>
+      <description>Die Ressource ist eine Überarbeitung der assoziierten Ressource</description>
+    </entry>
+    <!-- che:CHE_DS_AssociationTypeCode -->
+    <entry>
+      <code>isTemporalStateOf</code>
+      <label>Ist Zeitstand von</label>
+      <description>Bezug zu einem Datenbestand, von dem dieser Datenbestand einen bestimmten Zeitstand darstellt</description>
+    </entry>
+        <entry>
+      <code>isDescriptionOf</code>
+      <label>Ist Beschreibung von</label>
+      <description>Bezug zu einem Datenbestand, der von dieser Ressource/diesem Dokument beschrieben wird</description>
+    </entry>
+        <entry>
+      <code>isDescribedBy</code>
+      <label>Ist beschrieben durch</label>
+      <description>Bezug zu einer Ressource/einem Dokument, der diesen Datenbestand beschreibt</description>
+    </entry>
+  </codelist>
+  <codelist name="mri:DS_InitiativeTypeCode" alias="initiativeType">
+    <entry>
+      <code>campaign</code>
+      <label>Kampagne</label>
+      <description>Reihe geplanter Aktionen.</description>
+    </entry>
+    <entry>
+      <code>collection</code>
+      <label>Sammlung</label>
+      <description>Datensammlung zu einem bestimmten Zweck.</description>
+    </entry>
+    <entry>
+      <code>exercise</code>
+      <label>Übung</label>
+      <description>Spezifische Aktion, die einer oder mehreren Funktionen dient.</description>
+    </entry>
+    <entry>
+      <code>experiment</code>
+      <label>Experiment</label>
+      <description>Forschung zur Überprüfung einer Hypothese.</description>
+    </entry>
+    <entry>
+      <code>investigation</code>
+      <label>Untersuchung</label>
+      <description>Systematische Forschung.</description>
+    </entry>
+    <entry>
+      <code>mission</code>
+      <label>Mission</label>
+      <description>Spezifische Datensammlung.</description>
+    </entry>
+    <entry>
+      <code>sensor</code>
+      <label>Sensor</label>
+      <description>Teil einer Ausrüstung, die eine Information erkennt.</description>
+    </entry>
+    <entry>
+      <code>operation</code>
+      <label>Operation</label>
+      <description>Aktion, die Teil einer Aktionsreihe ist.</description>
+    </entry>
+    <entry>
+      <code>platform</code>
+      <label>Plattform</label>
+      <description>Fahrzeug oder andere Plattform, die einen Sensor trägt.</description>
+    </entry>
+    <entry>
+      <code>process</code>
+      <label>Prozess</label>
+      <description>Methode, um etwas zu tun.</description>
+    </entry>
+    <entry>
+      <code>program</code>
+      <label>Programm</label>
+      <description>Spezifisch geplante Aktion.</description>
+    </entry>
+    <entry>
+      <code>project</code>
+      <label>Projekt</label>
+      <description>Organisierte Forschung oder Entwicklung.</description>
+    </entry>
+    <entry>
+      <code>study</code>
+      <label>Studie</label>
+      <description>Untersuchung.</description>
+    </entry>
+    <entry>
+      <code>task</code>
+      <label>Aufgabe</label>
+      <description>Teil einer Arbeit.</description>
+    </entry>
+    <entry>
+      <code>trial</code>
+      <label>Versuch</label>
+      <description>Prozess zum Testen oder Demonstrieren von etwas.</description>
+    </entry>
+  </codelist>
+  <codelist name="gfc:FC_RoleType">
+    <entry>
+      <code>ordinary</code>
+      <label>Normal</label>
+      <description>Bezeichnet eine normale Beziehung.</description>
+    </entry>
+    <entry>
+      <code>aggregation</code>
+      <label>Aggregation</label>
+      <description>Bezeichnet eine UML-Aggregation (Teilrolle).</description>
+    </entry>
+    <entry>
+      <code>composition</code>
+      <label>Komposition</label>
+      <description>Bezeichnet eine UML-Komposition (Teilrolle).</description>
+    </entry>
+  </codelist>
+  <codelist name="mco:MD_ClassificationCode">
+    <description>Name der Einschränkungen beim Umgang mit dem Datenbestand</description>
+    <entry>
+      <code>unclassified</code>
+      <label>Nicht klassifiziert</label>
+      <description>Zur allgemeinen Veröffentlichung verfügbar</description>
+    </entry>
+    <entry>
+      <code>restricted</code>
+      <label>Intern</label>
+      <description>Nicht zur Veröffentlichung bestimmt</description>
+    </entry>
+    <entry>
+      <code>confidential</code>
+      <label>Vertraulich</label>
+      <description>Nur für Vertrauenspersonen</description>
+    </entry>
+    <entry>
+      <code>secret</code>
+      <label>Geheim</label>
+      <description>Nur für einen ausgewählten Personenkreis</description>
+    </entry>
+    <entry>
+      <code>topSecret</code>
+      <label>Streng geheim</label>
+      <description>Höchste Geheimhaltung</description>
+    </entry>
+    <entry>
+      <code>sensitiveButUnclassified</code>
+      <label>Sensibel, aber nicht klassifiziert</label>
+      <description>Obwohl nicht klassifiziert, erfordert eine strenge Kontrolle bezüglich seiner Veröffentlichung</description>
+    </entry>
+    <entry>
+      <code>forOfficialUseOnly</code>
+      <label>Nur für den amtlichen Gebrauch</label>
+      <description>Nicht klassifizierte Informationen, die nur für offizielle Zwecke verwendet werden dürfen, wie von der zuständigen Stelle bestimmt.</description>
+    </entry>
+    <entry>
+      <code>protected</code>
+      <label>Geschützt</label>
+      <description>Das Kompromittieren der Informationen, könnte zu Schäden führen</description>
+    </entry>
+    <entry>
+      <code>limitedDistribution</code>
+      <label>Eingeschränkte Verbreitung</label>
+      <description>Begrenzte Verbreitung durch zuständige Stelle</description>
+    </entry>
+  </codelist>
+  <codelist name="mrc:MD_CoverageContentTypeCode">
+    <entry>
+      <code>image</code>
+      <label>Bild</label>
+      <description>Digitale Darstellung eines physikalischen Parameters, der nicht der tatsächliche Wert des Parameters ist.</description>
+    </entry>
+    <entry>
+      <code>thematicClassification</code>
+      <label>Thematische Klassifikation</label>
+      <description>Kodierter Wert ohne quantitative Bedeutung, verwendet zur Darstellung eines physikalischen Wertes.</description>
+    </entry>
+    <entry>
+      <code>physicalMeasurement</code>
+      <label>Physikalische Messung</label>
+      <description>Wert in physikalischen Einheiten der gemessenen Grösse.</description>
+    </entry>
+    <entry>
+      <code>auxillaryInformation</code>
+      <label>Zusatzinformation</label>
+      <description>Daten, meist eine physikalische Messung, die zur Unterstützung der Berechnung der Hauptabdeckungen verwendet werden. Beispiel: Gitter einer Aerosol-Optikdicke zur Berechnung eines Oberflächentemperaturinhalts auf Meereshöhe.</description>
+    </entry>
+    <entry>
+      <code>qualityInformation</code>
+      <label>Qualitätsinformation</label>
+      <description>Daten zur Charakterisierung der Qualität der physicalMeasurement-Abdeckungen im Datensatz. Hinweis: In der Regel in einem Attribut gmi:QE_CoverageResult enthalten.</description>
+    </entry>
+    <entry>
+      <code>referenceInformation</code>
+      <label>Referenzinformation</label>
+      <description>Referenzinformationen zur Unterstützung der Berechnung oder Nutzung der physicalMeasurement-Abdeckungen im Datensatz. Beispiel: Gitter von Breiten-/Längengraden zur Geolokalisierung physikalischer Messungen.</description>
+    </entry>
+    <entry>
+      <code>modelResult</code>
+      <label>Modellergebnis</label>
+      <description>Ressourcen mit Werten, die mit einem Modell berechnet wurden, statt durch Beobachtung oder aus Beobachtungen berechnet zu werden.</description>
+    </entry>
+    <entry>
+      <code>coordinate</code>
+      <label>Koordinate</label>
+      <description>Daten zur Bereitstellung der Werte der Koordinatenachse.</description>
+    </entry>
+  </codelist>
+  <codelist name="mex:MD_DatatypeCode">
+    <entry>
+      <code>class</code>
+      <label>Klasse</label>
+      <description>Beschreibung einer Menge von Objekten mit denselben Attributen, Methoden usw.</description>
+    </entry>
+    <entry>
+      <code>codelist</code>
+      <label>Code-Liste</label>
+      <description>Bearbeitbare Aufzählung, verwendet um eine erweiterbare Liste von Werten auszudrücken</description>
+    </entry>
+    <entry>
+      <code>enumeration</code>
+      <label>Aufzählung</label>
+      <description>Aufzählung, verwendet um eine nicht erweiterbare Liste von Werten auszudrücken</description>
+    </entry>
+    <entry>
+      <code>codelistElement</code>
+      <label>Element einer Code-Liste</label>
+      <description>Möglicher Wert für eine Code-Liste</description>
+    </entry>
+    <entry>
+      <code>abstractClass</code>
+      <label>Abstrakte Klasse</label>
+      <description>Klasse, die nicht direkt instanziiert werden kann</description>
+    </entry>
+    <entry>
+      <code>aggregateClass</code>
+      <label>Aggregierte Klasse</label>
+      <description>Klasse, die aus einer Reihe von Klassen besteht, die durch eine Aggregationsbeziehung verbunden sind</description>
+    </entry>
+    <entry>
+      <code>specifiedClass</code>
+      <label>Spezifische Klasse</label>
+      <description>Klasse, die für eine höhere Ebene Klasse ersetzt werden kann</description>
+    </entry>
+    <entry>
+      <code>datatypeClass</code>
+      <label>Datentyp-Klasse</label>
+      <description>Klasse mit wenigen oder keinen Operationen, deren Rolle darin besteht, den Zustand einer anderen Klasse für Informationen im Zusammenhang mit Übertragung, Speicherung, Kodierung oder Persistenz zu verwalten</description>
+    </entry>
+    <entry>
+      <code>interfaceClass</code>
+      <label>Interface-Klasse</label>
+      <description>Namen der Operationen, die das Verhalten einer Ressource charakterisieren</description>
+    </entry>
+    <entry>
+      <code>unionClass</code>
+      <label>Union-Klasse</label>
+      <description>Klasse, die eine Auswahl eines spezifischen Typs beschreibt</description>
+    </entry>
+    <entry>
+      <code>metaClass</code>
+      <label>Metaklasse</label>
+      <description>Klasse, deren Instanzen Klassen sind</description>
+    </entry>
+    <entry>
+      <code>typeClass</code>
+      <label>Klassentyp</label>
+      <description>Klasse, die verwendet wird, um eine Instanzdomäne (Objekt) in Bezug auf die anwendbaren Operationen für diese Objekte zu spezifizieren. Ein Typ kann Attribute und Assoziationen haben</description>
+    </entry>
+    <entry>
+      <code>characterString</code>
+      <label>Zeichenkette</label>
+      <description>Freitext</description>
+    </entry>
+    <entry>
+      <code>integer</code>
+      <label>Ganzzahl</label>
+      <description>Numerisches Feld</description>
+    </entry>
+    <entry>
+      <code>association</code>
+      <label>Assoziation</label>
+      <description>Beziehung zwischen zwei Klassen</description>
+    </entry>
+  </codelist>
+  <codelist name="msr:MD_DimensionNameTypeCode">
+    <entry>
+      <code>row</code>
+      <label>Y-Achse</label>
+      <description>Achse der Ordinate (Y-Achse)</description>
+    </entry>
+    <entry>
+      <code>column</code>
+      <label>X-Achse</label>
+      <description>Achse der Abszisse (X-Achse)</description>
+    </entry>
+    <entry>
+      <code>vertical</code>
+      <label>Z-Achse</label>
+      <description>Vertikale Achse (Z-Achse)</description>
+    </entry>
+    <entry>
+      <code>track</code>
+      <label>Spur</label>
+      <description>Entlang der Bewegungsrichtung des Abtastpunkts</description>
+    </entry>
+    <entry>
+      <code>crossTrack</code>
+      <label>Kreuzspur</label>
+      <description>Senkrecht zur Bewegungsrichtung des Abtastpunkts</description>
+    </entry>
+    <entry>
+      <code>line</code>
+      <label>Linie</label>
+      <description>Abtastlinie eines Sensors</description>
+    </entry>
+    <entry>
+      <code>sample</code>
+      <label>Stichprobe</label>
+      <description>Element entlang einer Abtastlinie</description>
+    </entry>
+    <entry>
+      <code>time</code>
+      <label>Zeit</label>
+      <description>Dauer</description>
+    </entry>
+  </codelist>
+  <codelist name="mri:MD_KeywordTypeCode">
+    <entry>
+      <code>discipline</code>
+      <label>Fachdisziplin</label>
+      <description>Schlüsselwort, welches einen Wissenszweig oder ein Spezialgebiet kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>place</code>
+      <label>Ort</label>
+      <description>Schlüsselwort, welches einen Ort kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>stratum</code>
+      <label>Schichtungsebene</label>
+      <description>Schlüsselwort, welches eine oder mehrere Schichten abgelagerter Stoffe kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>temporal</code>
+      <label>Zeitraum</label>
+      <description>Schlüsselwort, welches eine Zeitspanne mit Bezug zu der Ressource kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>theme</code>
+      <label>Thema</label>
+      <description>Schlüsselwort, welches ein bestimmtes Thema oder einen Themenbereich kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>dataCentre</code>
+      <label>Datencenter</label>
+      <description>Schlüsselwort, welches einen Datenspeicher oder ein Archiv identifiziert, das Daten verwaltet und verteilt</description>
+    </entry>
+    <entry>
+      <code>featureType</code>
+      <label>Objektart</label>
+      <description>Schlüsselwort, welches eine Ressource identifiziert, die eine Sammlung von Instanzen von Entitäten mit gemeinsamen Merkmalen enthält oder betrifft</description>
+    </entry>
+    <entry>
+      <code>instrument</code>
+      <label>Instrument</label>
+      <description>Schlüsselwort, welches ein Gerät, zur Messung oder zum Vergleichen von physikalischen Eigenschaften kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>platform</code>
+      <label>Plattform</label>
+      <description>Schlüsselwort, welches eine Struktur, auf der ein Instrument montiert ist, kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>process</code>
+      <label>Prozess</label>
+      <description>Schlüsselwort, welches eine Reihe von Aktionen oder natürliche Ereignisse kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>project</code>
+      <label>Projekt</label>
+      <description>Schlüsselwort, welches ein Unterfangen mit dem Ziel ein Produkt oder eine Dienstleistung zu erstellen oder zu verändern, kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>service</code>
+      <label>Dienst</label>
+      <description>Schlüsselwort, welches eine Aktivität, die von einer Partei im Auftrag einer anderen ausgeführt wird, kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>product</code>
+      <label>Produkt</label>
+      <description>Schlüsselwort, welches ein Produkttyp kennzeichnet</description>
+    </entry>
+    <entry>
+      <code>subTopicCategory</code>
+      <label>Sub-Kategorie</label>
+      <description>Verfeinerung einer Themenkategorie für die Zwecke einer Klassifikation von Geodaten</description>
+    </entry>
+    <entry>
+      <code>taxon</code>
+      <label>Taxonomie</label>
+      <description>Schlüsselwort, welches eine Taxonomie der Ressource kennzeichnet</description>
+    </entry>
+  </codelist>
+  <codelist name="mmi:MD_MaintenanceFrequencyCode">
+    <entry>
+      <code>continual</code>
+      <label>Kontinuierlich</label>
+      <description>Wiederholt und oft aktualisiert</description>
+    </entry>
+    <entry>
+      <code>daily</code>
+      <label>Täglich</label>
+      <description>Täglich aktualisiert</description>
+    </entry>
+    <entry>
+      <code>weekly</code>
+      <label>Wöchentlich</label>
+      <description>Wöchentlich aktualisiert</description>
+    </entry>
+    <entry>
+      <code>fortnightly</code>
+      <label>Zweiwöchentlich</label>
+      <description>Jede zweite Woche aktualisiert</description>
+    </entry>
+    <entry>
+      <code>monthly</code>
+      <label>Monatlich</label>
+      <description>Monatlich aktualisiert</description>
+    </entry>
+    <entry>
+      <code>quarterly</code>
+      <label>Vierteljährlich</label>
+      <description>Quartalsweise aktualisiert</description>
+    </entry>
+    <entry>
+      <code>biannually</code>
+      <label>Halbjährlich</label>
+      <description>Zweimal jährlich aktualisiert</description>
+    </entry>
+    <entry>
+      <code>annually</code>
+      <label>Jährlich</label>
+      <description>Jährlich aktualisiert</description>
+    </entry>
+    <entry>
+      <code>asNeeded</code>
+      <label>Bei Bedarf</label>
+      <description>Bei Bedarf aktualisiert</description>
+    </entry>
+    <entry>
+      <code>irregular</code>
+      <label>Unregelmässig</label>
+      <description>In unregelmässigen Abständen aktualisiert</description>
+    </entry>
+    <entry>
+      <code>notPlanned</code>
+      <label>Nicht geplant</label>
+      <description>Es gibt keinen Zeitplan, um die Daten zu aktualisieren</description>
+    </entry>
+    <entry>
+      <code>unknown</code>
+      <label>Unbekannt</label>
+      <description>Das Überarbeitungsintervall für die Daten ist unbekannt</description>
+    </entry>
+    <entry>
+      <code>periodic</code>
+      <label>Periodisch</label>
+      <description>In regelmässigen Intervallen aktualisiert</description>
+    </entry>
+    <entry>
+      <code>semimonthly</code>
+      <label>Halbmonatlich</label>
+      <description>Zwei Mal pro Monat aktualisiert</description>
+    </entry>
+    <entry>
+      <code>biennially</code>
+      <label>Zweijährlich</label>
+      <description>Alle zwei Jahre aktualisiert</description>
+    </entry>
+  </codelist>
+  <codelist name="mrd:MD_MediumFormatCode">
+    <entry>
+      <code>cpio</code>
+      <label>Cpio</label>
+      <description>Eingabe-/Ausgabekopie (Befehl und Datei im UNIX-Format)</description>
+    </entry>
+    <entry>
+      <code>tar</code>
+      <label>Tar</label>
+      <description>Bandarchivierungsformat</description>
+    </entry>
+    <entry>
+      <code>highSierra</code>
+      <label>High Sierra</label>
+      <description>High Sierra-Dateisystem</description>
+    </entry>
+    <entry>
+      <code>iso9660</code>
+      <label>Iso9660</label>
+      <description>CD-ROM-Dateisystem</description>
+    </entry>
+    <entry>
+      <code>iso9660RockRidge</code>
+      <label>Iso9660RockRidge</label>
+      <description>Rock Ridge-Austauschprotokoll (UNIX)</description>
+    </entry>
+    <entry>
+      <code>iso9660AppleHFS</code>
+      <label>Iso9660AppleHFS</label>
+      <description>Hierarchisches Dateisystem (Macintosh)</description>
+    </entry>
+    <entry>
+      <code>udf</code>
+      <label>UDF</label>
+      <description>Universelles Diskformat</description>
+    </entry>
+  </codelist>
+  <codelist name="mex:MD_ObligationCode">
+    <entry>
+      <code>mandatory</code>
+      <label>Verpflichtend</label>
+      <description>Verpflichtend</description>
+    </entry>
+    <entry>
+      <code>optional</code>
+      <label>Optional</label>
+      <description>Optional</description>
+    </entry>
+    <entry>
+      <code>conditional</code>
+      <label>Bedingt</label>
+      <description>Bedingt</description>
+    </entry>
+  </codelist>
+  <codelist name="msr:MD_PixelOrientationCode">
+    <entry>
+      <code>center</code>
+      <label>Zentrum</label>
+      <description>Punkt zwischen der linken unteren und der rechten oberen Ecke des Pixels</description>
+    </entry>
+    <entry>
+      <code>lowerLeft</code>
+      <label>Unten links</label>
+      <description>Ecke im Pixel, die dem Ursprung des SRS am nächsten liegt; wenn zwei Pixel gleich weit vom Ursprung entfernt sind, die mit dem kleineren x-Wert</description>
+    </entry>
+    <entry>
+      <code>lowerRight</code>
+      <label>Unten rechts</label>
+      <description>Nächste Ecke gegen den Uhrzeigersinn von der linken unteren Ecke aus</description>
+    </entry>
+    <entry>
+      <code>upperRight</code>
+      <label>Oben rechts</label>
+      <description>Nächste Ecke gegen den Uhrzeigersinn von der rechten unteren Ecke aus</description>
+    </entry>
+    <entry>
+      <code>upperLeft</code>
+      <label>Oben links</label>
+      <description>Nächste Ecke gegen den Uhrzeigersinn von der rechten oberen Ecke aus</description>
+    </entry>
+  </codelist>
+  <codelist name="mcc:MD_ProgressCode">
+    <entry>
+      <code>completed</code>
+      <label>Abgeschlossen</label>
+      <description>Ist abgeschlossen</description>
+    </entry>
+    <entry>
+      <code>historicalArchive</code>
+      <label>Historisches Archiv</label>
+      <description>Daten sind archiviert (offline)</description>
+    </entry>
+    <entry>
+      <code>obsolete</code>
+      <label>Veraltet</label>
+      <description>Nicht mehr von Relevanz</description>
+    </entry>
+    <entry>
+      <code>onGoing</code>
+      <label>Kontinuierliche Aktualisierung</label>
+      <description>Laufend aktualisiert</description>
+    </entry>
+    <entry>
+      <code>planned</code>
+      <label>Geplant</label>
+      <description>Das geplante Erstellungsdatum, an dem die Ressource erstellt oder aktualisiert wird</description>
+    </entry>
+    <entry>
+      <code>required</code>
+      <label>Erforderlich</label>
+      <description>Muss erzeugt oder aktualisiert werden</description>
+    </entry>
+    <entry>
+      <code>underDevelopment</code>
+      <label>In Entwicklung</label>
+      <description>Daten sind in Bearbeitung</description>
+    </entry>
+    <entry>
+      <code>final</code>
+      <label>Endgültig</label>
+      <description>Der Verlauf ist abgeschlossen und es werden keine Änderungen akzeptiert.</description>
+    </entry>
+    <entry>
+      <code>pending</code>
+      <label>Pendent</label>
+      <description>Beauftragt, aber noch nicht bearbeitet.</description>
+    </entry>
+    <entry>
+      <code>retired</code>
+      <label>Zurückgezogen</label>
+      <description>Die Verwendung des Elements wird nicht mehr empfohlen. Es wurde nicht durch ein anderes Element ersetzt</description>
+    </entry>
+    <entry>
+      <code>superseded</code>
+      <label>Ersetzt</label>
+      <description>Durch neue Ressource ersetzt.</description>
+    </entry>
+    <entry>
+      <code>tentative</code>
+      <label>Provisorisch</label>
+      <description>Änderungen, die wahrscheinlich zu erwarten sind, bevor die Ressource die letzte ist oder fertiggestellt wird</description>
+    </entry>
+    <entry>
+      <code>valid</code>
+      <label>Valid</label>
+      <description>Unter bestimmten Bedingungen zulässig</description>
+    </entry>
+    <entry>
+      <code>accepted</code>
+      <label>Angenommen</label>
+      <description>Vom Auftraggeber akzeptiert</description>
+    </entry>
+    <entry>
+      <code>notAccepted</code>
+      <label>Nicht Angenommen</label>
+      <description>Vom Auftraggeber abgelehnt</description>
+    </entry>
+    <entry>
+      <code>withdrawn</code>
+      <label>Zurückgezogen</label>
+      <description>Aus allen Überlegungen herausgenommen</description>
+    </entry>
+    <entry>
+      <code>proposed</code>
+      <label>Vorgeschlagen</label>
+      <description>Vorgeschlagen, dass eine Erarbeitung erforderlich ist</description>
+    </entry>
+    <entry>
+      <code>deprecated</code>
+      <label>Abgewertet</label>
+      <description>Ersetzte Ressource, welche veraltet sein wird und dessen Verwendung nur zu historischen Zwecken erlaubt ist</description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>notobsolete</code>
+      <label>Nicht veraltet</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mco:MD_RestrictionCode">
+    <entry>
+      <code>copyright</code>
+      <label>Urheberrecht</label>
+      <description>Exklusives Recht auf Veröffentlichung, Produktion oder Verkauf von Rechten an einem literarischen, 
+        filmischen, musikalischen oder künstlerischen Werk oder auf die Verwendung eines Drucks oder eines Handelsetiketts, 
+        das einem Autor, Komponisten, Künstler oder Verleiher für einen bestimmten Zeitraum gesetzlich gewährt wird
+      </description>
+    </entry>
+    <entry>
+      <code>patent</code>
+      <label>Patent</label>
+      <description>Die Regierung hat das ausschliessliche Recht zur Herstellung, zum Verkauf, zur
+        Nutzung oder zur Lizenzierung einer Erfindung oder Entdeckung erteilt
+      </description>
+    </entry>
+    <entry>
+      <code>patentPending</code>
+      <label>Patent angemeldet</label>
+      <description>Produzierte oder verkaufte Informationen in Erwartung eines Patents
+      </description>
+    </entry>
+    <entry>
+      <code>trademark</code>
+      <label>Warenzeichen</label>
+      <description>Ein Name, ein Symbol oder ein anderes
+        Kennzeichen zur Identifizierung eines Produkts, das offiziell registriert und rechtlich
+        auf die Verwendung durch den Eigentümer oder Hersteller beschränkt ist
+      </description>
+    </entry>
+    <entry>
+      <code>license</code>
+      <label>Lizenz</label>
+      <description>Formelle Genehmigung etwas zu tun</description>
+    </entry>
+    <entry>
+      <code>intellectualPropertyRights</code>
+      <label>Geistiges Eigentum</label>
+      <description>Rechte auf finanziellen Nutzen aus sowie
+        die Kontrolle über die Verteilung immaterieller Güter, 
+        welche das Ergebnis von Kreativität sind
+      </description>
+    </entry>
+    <entry>
+      <code>restricted</code>
+      <label>Beschränkter Zugang</label>
+      <description>Von allgemeiner Offenlegung und Verbreitung ausgeschlossen</description>
+    </entry>
+    <entry>
+      <code>otherRestrictions</code>
+      <label>Andere Beschränkungen</label>
+      <description>Nicht aufgelistete Beschränkungen</description>
+    </entry>
+    <entry>
+      <code>unrestricted</code>
+      <label>Unbeschränkt</label>
+      <description>Keine Beschränkung</description>
+    </entry>
+    <entry>
+      <code>licenceUnrestricted</code>
+      <label>uneingeschränkte Lizenz</label>
+      <description>Für die Ressourcennutzung ist keine formelle Genehmigung erforderlich</description>
+    </entry>
+    <entry>
+      <code>licenceEndUser</code>
+      <label>Endnutzer-Lizenz</label>
+      <description>Eine formale Genehmigung zur Nutzung einer Ressource ist erforderlich
+        für eine Person oder Stelle, die sich von der Person, die die Ressource bestellt oder kauft, 
+        unterscheiden kann
+      </description>
+    </entry>
+    <entry>
+      <code>licenceDistributor</code>
+      <label>Vertriebslizenz</label>
+      <description>Eine formale Genehmigung ist erforderlich,
+        damit eine Person oder eine Einrichtung die
+        Ressource vermarkten oder verbreiten darf
+      </description>
+    </entry>
+    <entry>
+      <code>private</code>
+      <label>Privat</label>
+      <description>Schützt die Rechte von Einzelpersonen oder
+        Organisationen vor der Einsichtnahme, dem
+        Zugriff oder der Kenntnisnahme durch Dritte
+      </description>
+    </entry>
+    <entry>
+      <code>statutory</code>
+      <label>Gesetzlich</label>
+      <description>Gesetzlich vorgeschrieben</description>
+    </entry>
+    <entry>
+      <code>SBU</code>
+      <label>Sensibel, aber nicht eingestuft</label>
+      <description>Obwohl nicht klassifiziert, muss die Verbreitung streng kontrolliert werden
+      </description>
+    </entry>
+    <entry>
+      <code>in-confidence</code>
+      <label>Im Vertrauen </label>
+      <description>Im Vertrauen</description>
+    </entry>
+  </codelist>
+  <codelist name="mcc:MD_ScopeCode">
+    <entry>
+      <code>attribute</code>
+      <label>Attribut</label>
+      <description>Die Informationen gelten für den Attributwert</description>
+    </entry>
+    <entry>
+      <code>attributeType</code>
+      <label>Attributart</label>
+      <description>Die Informationen gelten für die Attributart</description>
+    </entry>
+    <entry>
+      <code>collectionHardware</code>
+      <label>Erfassungsgeräte</label>
+      <description>Die Informationen gelten für die eingesetzten Geräte zur Datenerfassung</description>
+    </entry>
+    <entry>
+      <code>collectionSession</code>
+      <label>Erfassungsaktion</label>
+      <description>Die Informationen gelten für die Datenerfassungsaktion</description>
+    </entry>
+    <entry>
+      <code>dataset</code>
+      <label>Datenbestand</label>
+      <description>Die Informationen gelten für den Datenbestand</description>
+    </entry>
+    <entry>
+      <code>series</code>
+      <label>Serie</label>
+      <description>Die Informationen gelten für die Serie</description>
+    </entry>
+    <entry>
+      <code>nonGeographicDataset</code>
+      <label>nichtgeografischer Datenbestand</label>
+      <description>Die Informationen gelten für nicht-geografische Datenbestände</description>
+    </entry>
+    <entry>
+      <code>dimensionGroup</code>
+      <label>Dimensionsgruppe</label>
+      <description>Die Informationen gelten für eine Dimensionsgruppe</description>
+    </entry>
+    <entry>
+      <code>feature</code>
+      <label>Objektinstanz</label>
+      <description>Die Informationen gelten für eine Objektinstanz</description>
+    </entry>
+    <entry>
+      <code>featureType</code>
+      <label>Objektart</label>
+      <description>Die Informationen gelten für eine Objektart</description>
+    </entry>
+    <entry>
+      <code>propertyType</code>
+      <label>Eigenschaftsart</label>
+      <description>Die Informationen gelten für eine Eigenschaftsart</description>
+    </entry>
+    <entry>
+      <code>fieldSession</code>
+      <label>Feldkampagne</label>
+      <description>Die Informationen gelten für eine Feldkampagne</description>
+    </entry>
+    <entry>
+      <code>software</code>
+      <label>Software</label>
+      <description>Die Informationen gelten für ein Computerprogramm oder Teilprogramm</description>
+    </entry>
+    <entry>
+      <code>service</code>
+      <label>Dienst</label>
+      <description>Die Informationen gelten für ein
+        Angebot, die eine Dienstanbietereinheit einer Dienstnutzereinheit 
+        über eine Reihe von Schnittstellen zur Verfügung stellt, die ein
+        Merkmal wie z. B. einen Anwendungsfall definieren
+      </description>
+    </entry>
+    <entry>
+      <code>model</code>
+      <label>Modell</label>
+      <description>Die Informationen gelten für eine
+        Kopie oder Nachbildung eines existierenden 
+        oder hypothetischen Objekts
+      </description>
+    </entry>
+    <entry>
+      <code>tile</code>
+      <label>Kachel</label>
+      <description>Die Informationen gelten für ein Mosaik, eine räumliche Untermenge von geografischen Daten</description>
+    </entry>
+    <entry>
+      <code>metadata</code>
+      <label>Metadaten</label>
+      <description>Die Informationen gelten für Metadaten</description>
+    </entry>
+    <entry>
+      <code>initiative</code>
+      <label>Initiative</label>
+      <description>Die Informationen gelten für eine Initiative</description>
+    </entry>
+    <entry>
+      <code>Beispiel</code>
+      <label>Probe</label>
+      <description>Die Informationen gelten für ein Beispiel</description>
+    </entry>
+    <entry>
+      <code>Dokument</code>
+      <label>Dokument</label>
+      <description>Die Informationen gelten für ein Dokument</description>
+    </entry>
+    <entry>
+      <code>repository</code>
+      <label>Repository</label>
+      <description>Die Informationen gelten für einen Speicherort</description>
+    </entry>
+    <entry>
+      <code>aggregate</code>
+      <label>Aggregat</label>
+      <description>Die Informationen gelten für ein Aggregat</description>
+    </entry>
+    <entry>
+      <code>product</code>
+      <label>Produkt</label>
+      <description>Metadaten, die eine ISO 19131 Datenprodukt-Spezifikation beschreiben</description>
+    </entry>
+    <entry>
+      <code>collection</code>
+      <label>Sammlung</label>
+      <description>Die Informationen gelten für eine nicht strukturierte Sammlung</description>
+    </entry>
+    <entry>
+      <code>coverage</code>
+      <label>Geltungsbereich</label>
+      <description>Die Informationen gelten für einen Geltungsbereich</description>
+    </entry>
+    <entry>
+      <code>application</code>
+      <label>Applikation</label>
+      <description>Informationsressource, 
+        die in einem bestimmten Hardware-Set
+        untergebracht und über ein Netzwerk zugänglich ist
+      </description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>map</code>
+      <label>Karte</label>
+      <description></description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>map-static</code>
+      <label>Statische Karte</label>
+      <description></description>
+    </entry>
+    <entry hideInEditMode="true">
+      <code>map-interactive</code>
+      <label>Interaktive Karte</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mcc:MD_SpatialRepresentationTypeCode">
+    <entry>
+      <code>vector</code>
+      <label>Vektor</label>
+      <description>Zur Darstellung geografischer Informationen werden Vektordaten verwendet</description>
+    </entry>
+    <entry>
+      <code>grid</code>
+      <label>Raster, Gitter</label>
+      <description>Zur Darstellung geografischer Informationen werden Raster-/Gitterdaten verwendet</description>
+    </entry>
+    <entry>
+      <code>textTable</code>
+      <label>Text der Tabelle</label>
+      <description>Zur Darstellung geografischer Informationen
+        werden textliche oder tabellarische Daten verwendet
+      </description>
+    </entry>
+    <entry>
+      <code>tin</code>
+      <label>TIN</label>
+      <description>« triangular irregular network » - Oberflächeninterpolation durch Dreiecksvermaschung</description>
+    </entry>
+    <entry>
+      <code>stereoModel</code>
+      <label>Stereomodell</label>
+      <description>3D-Sicht, entstanden aus zwei Stereobildern</description>
+    </entry>
+    <entry>
+      <code>video</code>
+      <label>Video</label>
+      <description>Szene einer Videoaufnahme</description>
+    </entry>
+  </codelist>
+  <codelist name="mri:MD_TopicCategoryCode" alias="topicCategory">
+    <description>Thematische Klassifikation von Geodaten auf einer übergeordneten Ebene, um die Gruppierung und Suche nach verfügbaren Geodatensätzen zu unterstützen.</description>
+    <entry>
+      <code>farming</code>
+      <label>S Landwirtschaft</label>
+      <description>Tierzucht und/oder Pflanzenanbau</description>
+    </entry>
+    <entry>
+      <code>biota</code>
+      <label>G Biologie</label>
+      <description>Flora und/oder Fauna in der natürlichen Umgebung</description>
+    </entry>
+    <entry>
+      <code>boundaries</code>
+      <label>D Grenzen</label>
+      <description>Gesetzlich festgelegte Grenzen</description>
+    </entry>
+    <entry>
+      <code>climatologyMeteorologyAtmosphere</code>
+      <label>K Klimatologie, Meteorologie, Atmosphäre</label>
+      <description>Prozesse und Naturereignisse der Atmosphäre inkl. Klimatologie und Meteorologie</description>
+    </entry>
+    <entry>
+      <code>economy</code>
+      <label>T Wirtschaft</label>
+      <description>Wirtschaftliche Aktivitäten, Verhältnisse und Beschäftigung</description>
+    </entry>
+    <entry>
+      <code>elevation</code>
+      <label>C Höhenangaben</label>
+      <description>Höhenangabe bezogen auf ein Höhenreferenzsystem</description>
+    </entry>
+    <entry>
+      <code>environment</code>
+      <label>L Umwelt</label>
+      <description>Umweltressourcen, Umweltschutz und Umwelterhaltung</description>
+    </entry>
+    <entry>
+      <code>geoscientificInformation</code>
+      <label>F Erdwissenschaften</label>
+      <description>Geowissenschaftliche Informationen</description>
+    </entry>
+    <entry>
+      <code>health</code>
+      <label>N Gesundheit</label>
+      <description>Gesundheit, Gesundheitsdienste, Humanökologie und Sicherheit</description>
+    </entry>
+    <entry>
+      <code>imageryBaseMapsEarthCover</code>
+      <label>A Oberflächenbeschreibung</label>
+      <description>Basiskarten und -daten</description>
+    </entry>
+    <entry>
+      <code>intelligenceMilitary</code>
+      <label>R Militär und Aufklärung</label>
+      <description>Militärbasen, militärische Einrichtungen und Aktivitäten</description>
+    </entry>
+    <entry>
+      <code>inlandWaters</code>
+      <label>I Binnengewässer</label>
+      <description>Binnengewässerdaten, Gewässernetze und deren Eigenschaften</description>
+    </entry>
+    <entry>
+      <code>location</code>
+      <label>B Ortsangaben</label>
+      <description>Positionsangaben und -dienste</description>
+    </entry>
+    <entry>
+      <code>oceans</code>
+      <label>H Meere</label>
+      <description>Merkmale und Charakteristika von salzhaltigen Gewässern (ausser Binnengewässern)</description>
+    </entry>
+    <entry>
+      <code>planningCadastre</code>
+      <label>E Planungsunterlagen und Kataster</label>
+      <description>Informationen für die Flächennutzungsplanung</description>
+    </entry>
+    <entry>
+      <code>society</code>
+      <label>M Gesellschaft</label>
+      <description>Kulturelle und gesellschaftliche Merkmale</description>
+    </entry>
+    <entry>
+      <code>structure</code>
+      <label>O Bauwerke</label>
+      <description>Von Menschen errichtetes Bauwerk</description>
+    </entry>
+    <entry>
+      <code>transportation</code>
+      <label>P Verkehrswesen</label>
+      <description>Mittel und Wege zur Beförderung von Personen und/oder Gütern</description>
+    </entry>
+    <entry>
+      <code>utilitiesCommunication</code>
+      <label>Q Ver- und Entsorgung, Kommunikation</label>
+      <description>Energie-, Wasser- und Abwassersysteme sowie Kommunikationsinfrastruktur und -dienste</description>
+    </entry>
+    <entry>
+      <code>extraTerrestrial</code>
+      <label>U Extraterrestrisch</label>
+      <description>Bereich von mehr als 100 km oberhalb der Erdoberfläche</description>
+    </entry>
+    <entry>
+      <code>disaster</code>
+      <label>V Katastrophe</label>
+      <description>Informationen zu Katastrophen</description>
+    </entry>
+  </codelist>
+  <codelist name="msr:MD_TopologyLevelCode">
+    <entry>
+      <code>geometryOnly</code>
+      <label>Nur Geometrie</label>
+      <description>Vektorobjekte ohne Struktur, die die
+        Topologie
+      beschreibt.</description>
+    </entry>
+    <entry>
+      <code>topology1D</code>
+      <label>Netzwerktopologie</label>
+      <description>Flächenloses Netzwerk (allgemein als Netzwerktopologie bezeichnet)
+      </description>
+    </entry>
+    <entry>
+      <code>planarGraph</code>
+      <label>Planarer Graph</label>
+      <description>Planare 1D-Topologie</description>
+    </entry>
+    <entry>
+      <code>fullPlanarGraph</code>
+      <label>Vollständige Netzwerktopologie</label>
+      <description>Planare 2D-Topologie</description>
+    </entry>
+    <entry>
+      <code>surfaceGraph</code>
+      <label>Oberflächentopologie</label>
+      <description>1D-Topologie mit Oberflächen</description>
+    </entry>
+    <entry>
+      <code>fullSurfaceGraph</code>
+      <label>Vollständige Oberflächentopologie</label>
+      <description>2D-Topologie mit Oberflächen</description>
+    </entry>
+    <entry>
+      <code>topology3D</code>
+      <label>3D-Topologie</label>
+      <description>3D-Topologie</description>
+    </entry>
+    <entry>
+      <code>fullTopology3D</code>
+      <label>Vollständige 3D-Topologie</label>
+      <description>Vollständige Abdeckung eines euklidischen 3D-Raums</description>
+    </entry>
+    <entry>
+      <code>abstract</code>
+      <label>Zusammenfassung</label>
+      <description>Geometrische Objekte ohne Beschreibung der Topologie
+      </description>
+    </entry>
+  </codelist>
+  <codelist name="mrc:MI_BandDefinition">
+    <entry>
+      <code>3db</code>
+      <label>3db</label>
+      <description>TBD</description>
+    </entry>
+    <entry>
+      <code>halfMaximum</code>
+      <label>Halbwertsbreite</label>
+      <description>Beschreibung: Breite einer Verteilung, die dem Abstand
+        zwischen den beiden äusseren Punkten der Verteilung, die die Hälfte der Leistung
+        des Spitzenwerts
+      </description>
+    </entry>
+    <entry>
+      <code>fiftyPercent</code>
+      <label>Fifty Percent</label>
+      <description>Beschreibung: Wellenlängendifferenz zwischen den oberen und
+        unteren Grenze an den 50 % (-3 dB)-Punkten der spektralen Empfindlichkeit des Sensors
+      </description>
+    </entry>
+    <entry>
+      <code>oneOverE</code>
+      <label>One Over E</label>
+      <description>TBD</description>
+    </entry>
+    <entry>
+      <code>equivalentWidth</code>
+      <label>Äquivalente Breite</label>
+      <description>TBD</description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_ContextCode">
+    <entry>
+      <code>Erwerb</code>
+      <label>Erwerb</label>
+      <description>Ereignis im Zusammenhang mit einer bestimmten Sammlung</description>
+    </entry>
+    <entry>
+      <code>pass</code>
+      <label>Pass</label>
+      <description>Veranstaltung im Zusammenhang mit der allgemeinen Sammlung</description>
+    </entry>
+    <entry>
+      <code>wayPoint</code>
+      <label>Wegpunkt</label>
+      <description>Ereignis im Zusammenhang mit allgemeiner Sammlung</description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_ObjectiveTypeCode">
+    <entry>
+      <code>instantaneousCollection</code>
+      <label>Sofortige Erfassung</label>
+      <description>Einzelne Instanz der Erfassung</description>
+    </entry>
+    <entry>
+      <code>persistentView</code>
+      <label>Persistente Ansicht</label>
+      <description>Mehrere Instanzen der Sammlung</description>
+    </entry>
+    <entry>
+      <code>survey</code>
+      <label>Umfrage</label>
+      <description>Vergleichende Sammlung</description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_OperationTypeCode">
+    <entry>
+      <code>real</code>
+      <label>Real</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>simulated</code>
+      <label>Simuliert</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>synthetisch</code>
+      <label>Synthetic</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mrc:MI_PolarisationOrientationCode">
+    <entry>
+      <code>horizontal</code>
+      <label>Horizontal</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>vertikal</code>
+      <label>Vertikal</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>leftCircular</code>
+      <label>Links kreisförmig</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>rightCircular</code>
+      <label>Rechts kreisförmig</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>theta</code>
+      <label>Theta</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>phi</code>
+      <label>Phi</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_PriorityCode">
+    <entry>
+      <code>kritisch</code>
+      <label>Kritisch</label>
+      <description>Entscheidende Bedeutung</description>
+    </entry>
+    <entry>
+      <code>highImportance</code>
+      <label>Hohe Bedeutung</label>
+      <description>Erfordert die Bereitstellung von Ressourcen</description>
+    </entry>
+    <entry>
+      <code>mediumImportance</code>
+      <label>Mittlere Wichtigkeit</label>
+      <description>Normale Betriebspriorität</description>
+    </entry>
+    <entry>
+      <code>lowImportance</code>
+      <label>Geringe Wichtigkeit</label>
+      <description>To be completed when resources are available</description>
+    </entry>
+    <entry>
+      <code>theta</code>
+      <label>Theta</label>
+      <Beschreibung></Beschreibung>
+    </entry>
+    <entry>
+      <code>phi</code>
+      <label>phi</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_SequenceCode">
+    <entry>
+      <code>start</code>
+      <label>Start</label>
+      <description>Beginn einer Sammlung</description>
+    </entry>
+    <entry>
+      <code>end</code>
+      <label>Ende</label>
+      <description>Ende einer Sammlung</description>
+    </entry>
+    <entry>
+      <code>instantaneous</code>
+      <label>Instantaneous</label>
+      <description>Sammlung ohne nennenswerte Dauer</description>
+    </entry>
+  </codelist>
+  <codelist name="mrc:MI_TransferFunctionTypeCode">
+    <entry>
+      <code>linear</code>
+      <label>Linear</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>logarithmisch</code>
+      <label>Logarithmisch</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>exponential</code>
+      <label>Exponential</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="mac:MI_TriggerCode">
+    <entry>
+      <code>automatic</code>
+      <label>Automatisch</label>
+      <description>Ereignis aufgrund externer Reize</description>
+    </entry>
+    <entry>
+      <code>manuell</code>
+      <label>Manuell</label>
+      <description>Manuell ausgelöstes Ereignis</description>
+    </entry>
+    <entry>
+      <code>vorprogrammiert</code>
+      <label>Vorprogrammiert</label>
+      <description>Ereignis durch geplante Reize ausgelöst</description>
+    </entry>
+  </codelist>
+  <codelist name="reg:RE_AmendmentType">
+    <entry>
+      <code>supersession</code>
+      <label>Ersetzung</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>retirement</code>
+      <label>Rücknahme</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="reg:RE_DecisionStatus">
+    <entry>
+      <code>pending</code>
+      <label>Ausstehend</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>Versuch</code>
+      <label>Versuch</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>final</code>
+      <label>Final</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="reg:RE_Disposition">
+    <entry>
+      <code>withdrawn</code>
+      <label>Zurückgezogen</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>accepted</code>
+      <label>Akzeptiert</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>notAccepted</code>
+      <label>Nicht akzeptiert</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="reg:RE_ItemStatus">
+    <entry>
+      <code>notValid</code>
+      <label>Nicht gültig</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>gültig</code>
+      <label>Gültig</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>superseded</code>
+      <label>Ersetzt</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>retired</code>
+      <label>Ausgemustert</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="srv:SV_ParameterDirection">
+    <entry>
+      <code>in</code>
+      <label>Eingabe</label>
+      <description>Der Parameter ist ein Eingabeparameter für die Instanz von
+        Dienstinstanz
+      </description>
+    </entry>
+    <entry>
+      <code>out</code>
+      <label>Ausgabe</label>
+      <description>Der Parameter ist ein Ausgabeparameter für die Instanz von
+        Dienstinstanz
+      </description>
+    </entry>
+    <entry>
+      <code>in/out</code>
+      <label>Eingang/Ausgang</label>
+      <description>Der Parameter ist sowohl ein Eingangs- als auch ein Ausgangsparameter
+        für die Service-Instanz
+      </description>
+    </entry>
+  </codelist>
+  <codelist name="mrs:MD_ReferenceSystemTypeCode">
+    <entry>
+      <code>compoundEngineeringParametric</code>
+      <label>Kombinierte parametrische Konstruktion</label>
+      <description>Raum-parametrisches Koordinatenreferenzsystem
+        mit einem kombinierten technischen Koordinatenreferenzsystem
+        und ein parametrisches Referenzsystem. BEISPIEL [lokal] x, y,
+        Druck
+      </description>
+    </entry>
+    <entry>
+      <code>compoundEngineeringParametricTemporal</code>
+      <label>Zeitlich und parametrisch kombinierte Technik</label>
+      <description>Kombiniertes zeitliches und parametrisches Koordinatenreferenzsystem
+        mit kombinierten zeitlichen Koordinatenreferenzsystemen
+        , parametrische und zeitliche Koordinatenbezugssysteme enthält BEISPIEL [lokal] x, y,
+        Druck, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundEngineeringTemporal</code>
+      <label>Kombinierte zeitliche Technik</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit einem kombinierten Koordinatensystem für technische Koordinaten
+        und ein zeitliches Koordinatenreferenzsystem. BEISPIEL [lokal]
+        x, y, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundEngineeringVertical</code>
+      <label>Vertikale kombinierte Technik</label>
+      <description>Kombiniertes räumliches Referenzsystem mit einem
+        Referenzsystem mit horizontalen technischen Koordinaten und ein
+        vertikalen Koordinatenbezugssystem. BEISPIEL [lokal] x, y, Höhe
+      </description>
+    </entry>
+    <entry>
+      <code>compoundEngineeringVerticalTemporal</code>
+      <label>Vertikale und zeitliche kombinierte Technik</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit kombinierten vertikalen und zeitlichen Koordinatenreferenzsystemen
+        , vertikale und zeitliche Koordinatenreferenzsysteme. BEISPIEL [lokal] x, y, Höhe,
+        Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic2DParametric</code>
+      <label>Kombinierte parametrische 2D-Geografie</label>
+      <description>Kombiniertes räumlich-parametrisches Koordinatenreferenzsystem
+        mit einem kombinierten zweidimensionalen horizontalen geografischen Koordinatenreferenzsystem
+        und ein parametrisches Koordinatensystem.
+        BEISPIEL Breitengrad, Längengrad, Druck
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic2DParametricTemporal</code>
+      <label>Kombinierte zeitliche und parametrische 2D-Geometrie</label>
+      <description>Referenzsystem mit kombinierten räumlich-parametrischen-zeitlichen Koordinaten
+        , das ein System mit
+        Referenzsystem mit horizontalen geografischen Koordinaten, ein
+        parametrischen Koordinaten und ein Referenzsystem mit
+        zeitlichen Koordinaten in zwei Dimensionen. BEISPIEL: Breitengrad, Längengrad,
+        Druck, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic2DTemporal</code>
+      <label>Kombinierte geometrische 2D-Zeit</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit einem kombinierten Referenzsystem aus zweidimensionalen horizontalen geografischen Koordinaten
+        und ein zeitliches Koordinatensystem.
+        BEISPIEL Breitengrad, Längengrad, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic2DVertical</code>
+      <label>Vertikale 2D-Geokombination</label>
+      <description>Kombiniertes Koordinatenreferenzsystem, bei dem ein
+        einziges konstituierendes Koordinatenbezugssystem ein System mit
+        horizontalen geodätischen Koordinatenbezugssystem und ein einziges System
+        ein vertikales Koordinatenreferenzsystem ist. BEISPIEL
+        Breitengrad, Längengrad, Höhe oder Tiefe [schwerkraftbezogen]
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic2DVerticalTemporal</code>
+      <label>Kombinierte zeitliche und vertikale 2D-Geometrie</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit einem kombinierten horizontalen geografischen Koordinatenreferenzsystem
+        , ein vertikales Koordinatenreferenzsystem und ein
+        Referenzsystem für zeitliche Koordinaten in zwei Dimensionen
+        BEISPIEL: Breitengrad, Längengrad, Höhe, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundGeographic3DTemporal</code>
+      <label>Kombinierte geometrische 3D-Zeitangabe</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit einem geografischen Koordinatenreferenzsystem
+        und ein dreidimensionales zeitliches Koordinatenreferenzsystem.
+        BEISPIEL: Breitengrad, Längengrad, Ellipsoidhöhe, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundProjected2DParametric</code>
+      <label>Kombinierte parametrische 2D-Projektion</label>
+      <description>Raum-parametrisches Koordinatenreferenzsystem
+        mit einem kombinierten Referenzsystem aus horizontalen Projektionskoordinaten
+        und ein parametrisches Koordinatensystem. BEISPIEL x-Koordinate,
+        Ordinate, Dichte
+      </description>
+    </entry>
+    <entry>
+      <code>compoundProjected2DParametricTemporal</code>
+      <label>Kombinierte zeitliche und parametrische 2D-Projektion</label>
+      <description>Kombiniertes zeitliches und parametrisches 2D-Koordinatenreferenzsystem
+        mit einem kombinierten zeitlichen Referenzsystem mit
+        , ein parametrisches Koordinatensystem und ein
+        Zeitreferenzsystem. BEISPIEL x-Achse,
+        Ordinate, Dichte, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundProjectedTemporal</code>
+      <label>Kombinierte projizierte Zeit</label>
+      <description>Raum-Zeit-Koordinaten-Referenzsystem
+        mit einem Referenzsystem mit horizontalen Koordinaten
+        und ein projiziertes horizontales Koordinatenreferenzsystem und ein
+        Zeitreferenzsystem. BEISPIEL Abszisse,
+        Ordinate, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>compoundProjectedVertical</code>
+      <label>Kombinierte projizierte Vertikale</label>
+      <description>Kombiniertes räumliches Referenzsystem, das ein
+        Referenzsystem mit projizierten horizontalen Koordinaten und ein
+        vertikalen Koordinatenbezugssystem. BEISPIEL Abszisse, Ordinate,
+        Höhe oder Tiefe [in Verbindung mit der Schwerkraft]
+      </description>
+    </entry>
+    <entry>
+      <code>compoundProjectedVerticalTemporal</code>
+      <label>Kombinierte zeitliche und vertikale Projektion</label>
+      <description>Kombiniertes Raum-Zeit-Koordinatenreferenzsystem
+        mit einem kombinierten horizontalen Koordinatenreferenzsystem
+        , ein vertikales Koordinatenreferenzsystem und ein
+        Zeitreferenzsystem. BEISPIEL x-Koordinate,
+        Ordinate, Höhe, Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>engineering</code>
+      <label>Ingenieurwesen</label>
+      <description>Koordinatenreferenzsystem auf Basis einer technischen Referenz
+        (Referenz, die die Beziehung eines Koordinatensystems
+        mit einem lokalen Bezugssystem beschreibt). BEISPIEL [lokal] x,y
+      </description>
+    </entry>
+    <entry>
+      <code>engineeringDesign</code>
+      <label>Technisches Design</label>
+      <description>Technisches Koordinatenreferenzsystem,
+        , in dem die grundlegende Darstellung eines sich bewegenden Objekts angegeben wird.
+        BEISPIEL [lokal] x,y
+      </description>
+    </entry>
+    <entry>
+      <code>engineeringImage</code>
+      <label>Technisches Bild</label>
+      <description>Koordinatenreferenzsystem auf der Grundlage einer
+        Bildreferenz (technische Referenz, die die Beziehung eines
+        Koordinatensystems in Bezug auf ein Bild definiert). BEISPIEL Zeile, Spalte
+      </description>
+    </entry>
+    <entry>
+      <code>geodeticGeocentric</code>
+      <label>Geozentrisch geodätisch</label>
+      <description>Geodätisches CRS-System mit einem kartesischen 3D-Koordinatensystem
+        . BEISPIEL [geozentrisch] X,Y,Z
+      </description>
+    </entry>
+    <entry>
+      <code>geodeticGeographic2D</code>
+      <label>2D geodätisch geografisch</label>
+      <description>Geodätisches CRS-System mit einem ellipsoidischen 2D-Koordinatensystem
+        . BEISPIEL: Breitengrad, Längengrad
+      </description>
+    </entry>
+    <entry>
+      <code>geodeticGeographic3D</code>
+      <label>3D geodätisch geografisch</label>
+      <description>Geodätisches CRS-System mit einem ellipsoidischen 3D-Koordinatensystem
+        . BEISPIEL: Breitengrad, Längengrad, ellipsoidische Höhe
+      </description>
+    </entry>
+    <entry>
+      <code>geographicIdentifier</code>
+      <label>Geografische Kennung</label>
+      <description>Raumbezogene Referenz in Form einer Bezeichnung oder eines Codes
+        , die einen Standort identifiziert. BEISPIEL Postleitzahl
+      </description>
+    </entry>
+    <entry>
+      <code>linear</code>
+      <label>Linear</label>
+      <description>Referenzsystem, das einen Standort durch
+        Bezug auf ein Segment einer linearen geografischen Einheit und eine
+        Entfernung entlang dieses Abschnitts von einem bestimmten Punkt aus BEISPIEL x km
+        entlang einer Strasse
+      </description>
+    </entry>
+    <entry>
+      <code>parametric</code>
+      <label>Parametrisch</label>
+      <description>Koordinatenreferenzsystem auf der Grundlage einer
+        parametrischen Bezug (Bezug, der die Beziehung eines
+        parametrischen Koordinatensystems in Bezug auf ein Objekt). BEISPIEL
+        Druck
+      </description>
+    </entry>
+    <entry>
+      <code>projected</code>
+      <label>Projiziert</label>
+      <description>Koordinatenreferenzsystem, abgeleitet von einem Referenzsystem
+        zweidimensionalen geodätischen Koordinatenreferenzsystem durch
+        Anwendung einer kartografischen Projektion abgeleitetes Koordinatenreferenzsystem. BEISPIEL Abszisse,
+        ordinate
+      </description>
+    </entry>
+    <entry>
+      <code>temporal</code>
+      <label>Zeitlich</label>
+      <description>Referenzsystem, anhand dessen die Zeit gemessen wird.
+        BEISPIEL Zeit
+      </description>
+    </entry>
+    <entry>
+      <code>vertikal</code>
+      <label>Vertikal</label>
+      <description>Eindimensionales Koordinatenreferenzsystem auf der
+        Basis eines vertikalen Bezugssystems (Bezugssystem, das die Beziehung der
+        Höhe oder Tiefe in Bezug auf die Schwerkraft der Erde beschreibt).
+        BEISPIEL Höhe oder Tiefe [in Bezug auf die Schwerkraft]
+      </description>
+    </entry>
+  </codelist>
+  <codelist name="msr:MD_CellGeometryCode">
+    <entry>
+      <code>Punkt</code>
+      <label>Punkt</label>
+      <description>Jede Zelle stellt einen Punkt dar</description>
+    </entry>
+    <entry>
+      <code>area</code>
+      <label>Fläche</label>
+      <description>Jede Zelle steht für eine Fläche</description>
+    </entry>
+    <entry>
+      <code>Voxel</code>
+      <label>Voxel</label>
+      <description>Jede Zelle stellt eine Volumenmessung auf einem
+        normalen Gitter in einem dreidimensionalen Raum
+      </description>
+    </entry>
+    <entry>
+      <code>stratum</code>
+      <label>Stratum</label>
+      <description>Höhenbereich für ein vertikales Profil eines einzelnen Punktes
+      </description>
+    </entry>
+  </codelist>
+  <codelist name="lan:MD_CharacterSetCode">
+    <entry>
+      <code>ucs2</code>
+      <label>Ucs2</label>
+      <description>16-Bit-Zeichensatz mit fester Grösse, basierend auf ISO
+        10646
+      </description>
+    </entry>
+    <entry>
+      <code>ucs4</code>
+      <label>Ucs4</label>
+      <description>32-Bit-Universalzeichensatz mit fester Grösse, basierend auf ISO/IEC
+        10646
+      </description>
+    </entry>
+    <entry>
+      <code>utf7</code>
+      <label>Utf7</label>
+      <description>7-Bit-UCS-Übertragungsformat mit variabler Grösse, basierend auf ISO/IEC
+        10646
+      </description>
+    </entry>
+    <entry>
+      <code>utf8</code>
+      <label>Utf8</label>
+      <description>8-Bit-UCS-Übertragungsformat mit variabler Grösse, basierend auf ISO/IEC
+        10646
+      </description>
+    </entry>
+    <entry>
+      <code>utf16</code>
+      <label>Utf16</label>
+      <description>16-Bit-UCS-Übertragungsformat mit variabler Grösse, basierend auf ISO/IEC
+        10646
+      </description>
+    </entry>
+    <entry>
+      <code>8859part1</code>
+      <label>8859part1</label>
+      <description>ISO/IEC 8859-1, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 1: Lateinisches Alphabet Nr. 1
+      </description>
+    </entry>
+    <entry>
+      <code>8859part2</code>
+      <label>8859part2</label>
+      <description>ISO/IEC 8859-2, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 2: Lateinisches Alphabet Nr. 2
+      </description>
+    </entry>
+    <entry>
+      <code>8859part3</code>
+      <label>8859part3</label>
+      <description>ISO/IEC 8859-3, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 3: Lateinisches Alphabet Nr. 3
+      </description>
+    </entry>
+    <entry>
+      <code>8859part4</code>
+      <label>8859part4</label>
+      <description>ISO/IEC 8859-4, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 4: Lateinisches Alphabet Nr. 4
+      </description>
+    </entry>
+    <entry>
+      <code>8859part5</code>
+      <label>8859part5</label>
+      <description>ISO/IEC 8859-5, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 5: Lateinisches/kyrillisches Alphabet
+      </description>
+    </entry>
+    <entry>
+      <code>8859part6</code>
+      <label>8859part6</label>
+      <description>ISO/IEC 8859-6, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 6: Lateinisches/arabisches Alphabet
+      </description>
+    </entry>
+    <entry>
+      <code>8859part7</code>
+      <label>8859part7</label>
+      <description>ISO/IEC 8859-7, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 7: Lateinisches/Griechisches Alphabet
+      </description>
+    </entry>
+    <entry>
+      <code>8859part8</code>
+      <label>8859part8</label>
+      <description>ISO/IEC 8859-8, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 8: Lateinisches/hebräisches Alphabet
+      </description>
+    </entry>
+    <entry>
+      <code>8859part9</code>
+      <label>8859part9</label>
+      <description>ISO/IEC 8859-9, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 9: Lateinisches Alphabet Nr. 5
+      </description>
+    </entry>
+    <entry>
+      <code>8859part10</code>
+      <label>8859part10</label>
+      <description>ISO/IEC 8859-10, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 10: Lateinisches Alphabet Nr. 6
+      </description>
+    </entry>
+    <entry>
+      <code>8859part11</code>
+      <label>8859part11</label>
+      <description>ISO/IEC 8859-11, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 11: Lateinisches/Thailändisches Alphabet
+      </description>
+    </entry>
+    <entry>
+      <code>8859part13</code>
+      <label>8859part13</label>
+      <description>ISO/IEC 8859-13, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 13: Lateinisches Alphabet Nr. 7
+      </description>
+    </entry>
+    <entry>
+      <code>8859part14</code>
+      <label>8859part14</label>
+      <description>ISO/IEC 8859-14, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 14: Lateinisches Alphabet Nr. 8 (keltisch)
+      </description>
+    </entry>
+    <entry>
+      <code>8859part15</code>
+      <label>8859part15</label>
+      <description>ISO/IEC 8859-15, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 15: Lateinisches Alphabet Nr. 9
+      </description>
+    </entry>
+    <entry>
+      <code>8859part16</code>
+      <label>8859part16</label>
+      <description>ISO/IEC 8859-16, Informationstechnologie – 8-Bit-Einzelbyte
+        codierte Grafik
+        Zeichensätze – Teil 16: Lateinisches Alphabet Nr. 10
+      </description>
+    </entry>
+    <entry>
+      <code>jis</code>
+      <label>Jis</label>
+      <description>Japanischer Zeichensatz für die elektronische Übertragung
+      </description>
+    </entry>
+    <entry>
+      <code>shiftJIS</code>
+      <label>ShiftJIS</label>
+      <description>Japanischer Zeichensatz, der auf MS-DOS-Rechnern verwendet wird</description>
+    </entry>
+    <entry>
+      <code>eucJP</code>
+      <label>EucJP</label>
+      <description>Japanischer Zeichensatz, der auf UNIX-basierten Rechnern verwendet wird</description>
+    </entry>
+    <entry>
+      <code>usAscii</code>
+      <label>UsAscii</label>
+      <description>United States ASCII-Zeichensatz (ISO 646 US)</description>
+    </entry>
+    <entry>
+      <code>ebcdic</code>
+      <label>Ebcdic</label>
+      <description>IBM-Mainframe-Zeichensatz</description>
+    </entry>
+    <entry>
+      <code>eucKR</code>
+      <label>EucKR</label>
+      <description>Koreanischer Zeichensatz</description>
+    </entry>
+    <entry>
+      <code>big5</code>
+      <label>Big5</label>
+      <description>Traditioneller chinesischer Zeichensatz, der in Taiwan, Hongkong und
+        China und anderen
+        Gebieten
+      </description>
+    </entry>
+    <entry>
+      <code>GB2312</code>
+      <label>GB2312</label>
+      <description>Vereinfachter chinesischer Zeichensatz</description>
+    </entry>
+  </codelist>
+  <codelist name="mrd:MD_MediumNameCode">
+    <entry>
+      <code>cdRom</code>
+      <label>CD-ROM</label>
+      <description>Optische Nur-Lese-Disk</description>
+    </entry>
+    <entry>
+      <code>dvd</code>
+      <label>DVD</label>
+      <description>Universal Digital Disc</description>
+    </entry>
+    <entry>
+      <code>dvdRom</code>
+      <label>DVD-ROM</label>
+      <description>Nur-Lese-Universal-Digital-Disc</description>
+    </entry>
+    <entry>
+      <code>3halfInchFloppy</code>
+      <label>3,5-Zoll-Diskette</label>
+      <description>3,5-Zoll-Magnetdiskette</description>
+    </entry>
+    <entry>
+      <code>5quarterInchFloppy</code>
+      <label>5,25-Zoll-Diskette</label>
+      <description>5,25-Zoll-Magnetdiskette</description>
+    </entry>
+    <entry>
+      <code>7trackTape</code>
+      <label>7-Spur-Magnetband</label>
+      <description>Magnetband</description>
+    </entry>
+    <entry>
+      <code>9trackTape</code>
+      <label>9-Spur-Magnetband</label>
+      <description>Magnetband</description>
+    </entry>
+    <entry>
+      <code>3480Cartridge</code>
+      <label>Kassette 3480</label>
+      <description>Magnetbandkassette 3480</description>
+    </entry>
+    <entry>
+      <code>3490Cartridge</code>
+      <label>Kassette 3490</label>
+      <description>Magnetbandkassette 3490</description>
+    </entry>
+    <entry>
+      <code>3580Cartridge</code>
+      <label>Kassette 3580</label>
+      <description>Magnetbandkassette 3580</description>
+    </entry>
+    <entry>
+      <code>4mmCartridgeTape</code>
+      <label>4-mm-Magnetband</label>
+      <description>4-mm-Magnetband</description>
+    </entry>
+    <entry>
+      <code>8mmCartridgeTape</code>
+      <label>Magnetband 8 mm</label>
+      <description>8-mm-Magnetband</description>
+    </entry>
+    <entry>
+      <code>1quarterInchCartridgeTape</code>
+      <label>0,25-Zoll-Magnetband</label>
+      <description>0,25-Zoll-Magnetband</description>
+    </entry>
+    <entry>
+      <code>digitalLinearTape</code>
+      <label>Magnetband 0,5 Zoll</label>
+      <description>Magnetband 0,5 Zoll</description>
+    </entry>
+    <entry>
+      <code>onLine</code>
+      <label>Online</label>
+      <description>Online</description>
+    </entry>
+    <entry>
+      <code>Satellit</code>
+      <label>Satellit</label>
+      <description>Satellitenkommunikation</description>
+    </entry>
+    <entry>
+      <code>telephoneLink</code>
+      <label>Telefonische Kommunikation</label>
+      <description>Verbindungen über ein Telefonnetz</description>
+    </entry>
+    <entry>
+      <code>hardcopy</code>
+      <label>Papier</label>
+      <description>Papierdokument</description>
+    </entry>
+  </codelist>
+  <codelist name="srv:DCPList">
+    <entry>
+      <code>XML</code>
+      <label>XML</label>
+      <description>Extensible Markup Language (Erweiterbare Auszeichnungssprache)
+      </description>
+    </entry>
+    <entry>
+      <code>CORBA</code>
+      <label>CORBA</label>
+      <description>Common Object Request Broker Architecture (Allgemeine Architektur für Vermittler von Objekt-Nachrichten)
+      </description>
+    </entry>
+    <entry>
+      <code>JAVA</code>
+      <label>JAVA</label>
+      <description>Objektorientierte Programmiersprache</description>
+    </entry>
+    <entry>
+      <code>COM</code>
+      <label>COM</label>
+      <description>Component Object Model (Objektkomponenten-Modell)</description>
+    </entry>
+    <entry>
+      <code>SQL</code>
+      <label>SQL</label>
+      <description>Structured Query Language</description>
+    </entry>
+    <entry>
+      <code>SOAP</code>
+      <label>SOAP</label>
+      <description>Simple Object Access Protocol (Netzwerkprotokoll)</description>
+    </entry>
+    <entry>
+      <code>Z3950</code>
+      <label>Z3950</label>
+      <description>ISO 23950</description>
+    </entry>
+    <entry>
+      <code>HTTP</code>
+      <label>HTTP</label>
+      <description>Hypertext Transfer Protocol (Hypertext-Übertragungsprotokoll)</description>
+    </entry>
+    <entry>
+      <code>FTP</code>
+      <label>FTP</label>
+      <description>File Transfer Protocol (Dateiübertragungsprotokoll)</description>
+    </entry>
+    <entry>
+      <code>WebServices</code>
+      <label>Webdienst</label>
+      <description>Ein Dienst, der über ein Netzwerk angesprochen werden kann</description>
+    </entry>
+  </codelist>
+  <codelist name="srv:SV_CouplingType">
+    <entry>
+      <code>tight</code>
+      <label>Fest</label>
+      <description>Die Serviceinstanz ist eng mit einer Dateninstanz gekoppelt
+        , d. h. die Klasse MD_DataIdentification MUSS
+        beschrieben werden
+      </description>
+    </entry>
+    <entry>
+      <code>mixed</code>
+      <label>Gemischt</label>
+      <description>Die Dienstinstanz ist mit einer Dateninstanz gemischt gekoppelt, d. h. die Klasse
+        MD_DataIdentification beschreibt die verknüpfte Dateninstanz, und
+        zusätzlich kann die Dienstinstanz mit anderen externen Dateninstanzen
+        verwendet werden
+      </description>
+    </entry>
+    <entry>
+      <code>loose</code>
+      <label>Lose</label>
+      <description>Die Service-Instanz ist leicht an eine Dateninstanz gekoppelt
+        Dateninstanz, d. h., es muss keine Klasse MD_DataIdentification
+        beschrieben werden
+      </description>
+    </entry>
+  </codelist>
+  <codelist name="gco:nilReason">
+    <entry>
+      <code>missing</code>
+      <label>Fehlt</label>
+    </entry>
+    <entry>
+      <code>nicht anwendbar</code>
+      <label>Nicht anwendbar</label>
+    </entry>
+    <entry>
+      <code>Vorlage</code>
+      <label>Vorlage</label>
+    </entry>
+    <entry>
+      <code>unknown</code>
+      <label>Unbekannt</label>
+    </entry>
+    <entry>
+      <code>zurückgehalten</code>
+      <label>Mit Genehmigung</label>
+    </entry>
+  </codelist>
+  <codelist name="indeterminatePosition">
+    <entry>
+      <code>after</code>
+      <label>Nach</label>
+    </entry>
+    <entry>
+      <code>vor</code>
+      <label>Vorher</label>
+    </entry>
+    <entry>
+      <code>now</code>
+      <label>Aktuell</label>
+    </entry>
+    <entry>
+      <code>unknown</code>
+      <label>Unbekannt</label>
+    </entry>
+  </codelist>
+  <codelist name="che:CHE_MD_SubTopicCategoryCode" alias="subTopicCategory">
+    <definition>Subtopic Kategorien gemäss eCH-0166 zur Verbesserung der Klassifizierung von Themenkategorien und der Suche nach Geodaten</definition>
+    <entry>
+      <code>imageryBaseMapsEarthCover_BaseMaps</code>
+      <label>A1 Basiskarten, Landschaftsmodelle</label>
+    </entry>
+    <entry>
+      <code>imageryBaseMapsEarthCover_EarthCover</code>
+      <label>A2 Bodenbedeckung, Bodennutzung</label>
+    </entry>
+    <entry>
+      <code>imageryBaseMapsEarthCover_Imagery</code>
+      <label>A3 Luft-, Satellitenbilder</label>
+    </entry>
+    <entry>
+      <code>planningCadastre_Planning</code>
+      <label>E1 Raumplanung, Raumentwicklung</label>
+    </entry>
+    <entry>
+      <code>planningCadastre_Cadastre</code>
+      <label>E2 Grundstückskataster</label>
+    </entry>
+    <entry>
+      <code>geoscientificInformation_Geology</code>
+      <label>F1 Geologie</label>
+    </entry>
+    <entry>
+      <code>geoscientificInformation_Soils</code>
+      <label>F2 Boden</label>
+    </entry>
+    <entry>
+      <code>geoscientificInformation_NaturalHazards</code>
+      <label>F3 Naturbedingte Risiken</label>
+    </entry>
+    <entry>
+      <code>environment_EnvironmentalProtection</code>
+      <label>L1 Umweltschutz, Lärm</label>
+    </entry>
+    <entry>
+      <code>environment_NatureProtection</code>
+      <label>L2 Natur- und Landschaftsschutz</label>
+    </entry>
+    <entry>
+      <code>utilitiesCommunication_Energy</code>
+      <label>Q1 Energie</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>utilitiesCommunication_Utilities</code>
+      <label>Q2 Wasser- und Abfallsysteme</label>
+      <description></description>
+    </entry>
+    <entry>
+      <code>utilitiesCommunication_Communication</code>
+      <label>Q3 Kommunikation</label>
+      <description></description>
+    </entry>
+  </codelist>
+  <codelist name="che:CHE_MD_LevelCode" alias="mdLevelCode">
+    <entry>
+      <code>communal</code>
+      <label>Kommunal</label>
+    </entry>
+    <entry>
+      <code>cantonal</code>
+      <label>Kantonal</label>
+    </entry>
+    <entry>
+      <code>federal</code>
+      <label>National</label>
+    </entry>
+    <entry>
+      <code>other</code>
+      <label>Anderes</label>
+    </entry>
+  </codelist>
+  <codelist name="che:CHE_MD_BasicGeodataTypeCode" alias="BasicGeodataTypeCode">
+    <description>Geobasisdaten-Typ</description>
+    <entry>
+      <code>oereb</code>
+      <label>ÖREB-Kataster</label>
+      <description>Siehe GeoIV Annex 1 (RS 510.620)</description>
+    </entry>
+    <entry>
+      <code>referenceGeodata</code>
+      <label>Georeferenzdaten</label>
+      <description>Siehe GeoIV Annex 1 (RS 510.620)</description>
+    </entry>
+  </codelist>
+<codelist name="che:CHE_MD_BasicGeodataAccessLevelCode" alias="BasicGeodataAccessLevelCode">
+    <entry>
+      <code>A</code>
+      <label>A</label>
+	  <description>Öffentlich zugängliche Geobasisdaten, Zugangsberechtigungsstufe A (Art. 22 GeoIV)</description>
+    </entry>
+    <entry>
+      <code>B</code>
+      <label>B</label>
+		<description>Beschränkt öffentlich zugängliche Geobasisdaten, Zugangsberechtigungsstufe B (Art. 23 GeoIV)</description>
+    </entry>
+	<entry>
+      <code>C</code>
+      <label>C</label>
+		<description>Nicht öffentlich zugängliche Geobasisdaten, Zugangsberechtigungsstufe C (Art. 24 GeoIV)</description>
+    </entry>
+  </codelist>
+<codelist name="che:CHE_CI_LegislationTypeCode" alias="LegislationTypeCode">
+    <entry>
+      <code>law</code>
+      <label>Gesetz</label>
+	</entry>
+    <entry>
+      <code>ordinance</code>
+      <label>Verordnung</label>
+	 </entry>
+	<entry>
+      <code>other</code>
+      <label>Andere</label>
+      <description>Andere gesetzliche Vorschrift</description>
+	</entry>
+  </codelist>	
+<codelist name="che:CHE_AppraisalOfArchivalValueCode" alias="appraisalOfArchivalValue">
+    <entry>
+      <code>A</code>
+      <label>A</label>
+      <description>Archivwürdig</description>
+	</entry>
+    <entry>
+      <code>N</code>
+      <label>N</label>
+      <description>Nicht archivwürdig</description>
+	 </entry>
+	<entry>
+      <code>S</code>
+      <label>S</label>
+      <description>Archivwürdig in Auswahl (Sampling oder Selektion)</description>
+	</entry>
+  </codelist>	
+<codelist name="che:CHE_ReasonForArchivingValueCode" alias="ReasonForArchivingValueCode">
+    <entry>
+      <code>legalRelevance</code>
+      <label>Rechtliche Relevanz</label>
+	</entry>
+    <entry>
+      <code>guaranteeOfLegalCertainty</code>
+      <label>Gewährleistung von Rechtssicherheit</label>
+	 </entry>
+	<entry>
+      <code>evidenceOfBusinessPractice</code>
+      <label>Nachweis der Geschäftspraxis</label>
+	</entry>
+	    <entry>
+      <code>benefitsForResearch</code>
+      <label>Nutzen für die Forschung</label>
+	</entry>
+    <entry>
+      <code>contemporaryInterest</code>
+      <label>Zeitgenössisches Interesse</label>
+	 </entry>
+	<entry>
+      <code>sensitivity</code>
+      <label>sensible Themen</label>
+	</entry>
+	<entry>
+      <code>developmentsProgression</code>
+      <label>Entwicklungen / Verlauf</label>
+	</entry>
+    <entry>
+      <code>definingPowers</code>
+      <label>Definitionsmacht</label>
+	 </entry>
+ </codelist>		
+	
+</codelists>
