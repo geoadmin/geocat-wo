@@ -1723,7 +1723,7 @@ public class SchemaManager {
         }
 
         if (matches.size() > 1) {
-            throw new SchemaMatchConflictException("Metadata record with " + md.getName() + " (Namespace " + md.getNamespace() + " matches more than one schema - namely: " + matches.toString() + " - during schema autodetection mode " + mode);
+            returnVal = "iso19115-3.2018.che";
         } else if (matches.size() == 1) {
             returnVal = matches.get(0);
         }
