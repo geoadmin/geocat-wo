@@ -32,6 +32,7 @@ RUN cd /opt/geonetwork/ && \
      rm geonetwork.war
 
 COPY jetty/geonetwork_context_template.xml /usr/local/share/geonetwork/geonetwork_context_template.xml
+COPY jetty/jetty-http.xml /usr/local/jetty/etc/jetty-http.xml
 COPY ./docker-entrypoint.sh /geonetwork-entrypoint.sh
 
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
