@@ -14,6 +14,7 @@ ENV JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Djava.awt.hea
 USER root
 RUN apt-get -y update && \
     apt-get -y install --no-install-recommends \
+        telnet \
         curl \
         unzip && \
     apt install -y python3-pip python3.12-venv && \
