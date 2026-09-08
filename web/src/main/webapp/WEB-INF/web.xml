@@ -424,15 +424,15 @@
     </init-param>
     <init-param>
       <param-name>securityMode</param-name>
-      <param-value>${proxy.securityMode}</param-value>
+      <param-value>NONE</param-value>
     </init-param>
     <init-param>
       <param-name>excludeHosts</param-name>
-      <param-value>${proxy.excludeHosts}</param-value>
+      <param-value>^(localhost|127\..*|0\..*|255\.255\.255\.255|.*\.local|.*\.localhost|0:0:0:0:0:0:1|::1)$</param-value>
     </init-param>
     <init-param>
       <param-name>allowPorts</param-name>
-      <param-value>${proxy.allowPorts}</param-value>
+      <param-value></param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
