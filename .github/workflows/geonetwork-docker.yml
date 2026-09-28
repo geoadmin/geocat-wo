@@ -5,6 +5,8 @@ on:
     branches:
     - master
     - 4.4.12*
+    - fix/online-resource-name-multilingual
+    - feature/ga4-analytics-integration
 
 jobs:
   build:
