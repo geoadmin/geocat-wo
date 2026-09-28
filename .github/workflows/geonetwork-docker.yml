@@ -5,6 +5,7 @@ on:
     branches:
     - master
     - 4.4.12*
+    - fix/online-resource-name-multilingual
 
 jobs:
   build:
