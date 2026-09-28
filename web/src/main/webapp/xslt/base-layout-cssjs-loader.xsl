@@ -370,4 +370,20 @@
       </script>
     </xsl:if>
   </xsl:template>
+
+  <!-- Google Analytics 4 tracking -->
+  <xsl:template name="ga4-load-head">
+    <!-- Google tag (gtag.js) -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-C0NWPQVB2N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-C0NWPQVB2N');
+    </script>
+  </xsl:template>
+
+  <xsl:template name="ga4-load-body">
+    <!-- GA4 tracking handled in head -->
+  </xsl:template>
 </xsl:stylesheet>

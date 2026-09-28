@@ -86,6 +86,10 @@
               title="{$title}"/>
 
         <xsl:call-template name="css-load-nojs"/>
+        <!-- Google Analytics 4 tracking -->
+        <xsl:if test="$env/system/server/production = 'true'">
+          <xsl:call-template name="ga4-load-head"/>
+        </xsl:if>
 
       </head>
 
@@ -99,6 +103,10 @@
         </div>
 
         <xsl:call-template name="webAnalytics"/>
+        <!-- Google Analytics 4 tracking -->
+        <xsl:if test="$env/system/server/production = 'true'">
+          <xsl:call-template name="ga4-load-body"/>
+        </xsl:if>
       </body>
     </html>
   </xsl:template>
