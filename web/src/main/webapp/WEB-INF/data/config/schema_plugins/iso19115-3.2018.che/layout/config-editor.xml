@@ -404,7 +404,7 @@
       <name>cit:hoursOfService</name>
       <name>cit:ISBN</name>
       <name>cit:ISSN</name>
-      <name>cit:name</name>
+      <name parent="cit:CI_Individual">cit:name</name>
       <name>cit:number</name>
       <name>cit:page</name>
       <name>cit:postalCode</name>
